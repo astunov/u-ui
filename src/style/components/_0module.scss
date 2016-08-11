@@ -1,31 +1,31 @@
 // Collect all components in 1 file
-@import "_card";
-@import "_categories-menu";
-@import "_category-item";
-@import "_category-list";
-@import "_discBar";
-@import "_filterResultBar";
-@import "_filters";
-@import "_goods";
-@import "_inputs";
-@import "_stripes";
+@import 'card';
+@import 'categories-menu';
+@import 'category-item';
+@import 'category-list';
+@import 'discBar';
+@import 'filterResultBar';
+@import 'filters';
+@import 'goods';
+@import 'inputs';
+@import 'stripes';
 
-@import "_icons";
-@import "_breadcrumbs";
+@import 'icons';
+@import 'breadcrumbs';
 
-@import "_btn";
+@import 'btn';
 
-@import "_discount-widget";
+@import 'discount-widget';
 
-@import "_controls";
-@import "_viewby";
+@import 'controls';
+@import 'viewby';
 
-@import "_link-more";
+@import 'link-more';
 
 
 // Objects: universal
 // cross-project components
-@import "objects/_o-table";
+@import 'o-table';
 
 
 
@@ -81,9 +81,10 @@
     margin: 20px 0;
     img
     {
-        @extend .h-img-res;
-        margin-left: auto;
         margin-right: auto;
+        margin-left: auto;
+
+        @extend .h-img-res;
     }
 }
 
@@ -110,4 +111,3 @@
         margin: 0 0 15px;
     }
 }
-

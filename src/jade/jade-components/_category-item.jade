@@ -39,15 +39,15 @@ mixin categoryItem
 		var randomImg = getRandomArbitrary(0, src.length - 1);
 		var randomTitle = getRandomArbitrary(0, title.length - 1);
 
-	article.col.col-4.c-category-item
-		header.c-category-item__header
-			h3.c-category-item__title.h3: a.c-category-item__title-link(href="#") Инструменты
-		div.c-category-item__body.o-tb
+	article.col.col-4.cat-item
+		header.cat-item__header
+			h3.cat-item__title.h3: a.cat-item__title-link(href="#") Инструменты
+		div.cat-item__body.o-tb
 			.o-tb__row
 				.o-tb__td.col-7.is--top
-					ul.c-category-item__list
+					ul.cat-item__list
 						each item in categoryItemData
-							li.c-category-item__list-item: a.c-category-item__link(href="https://ya.ru" title="#{item.title}") !{item.title}
+							li.cat-item__list-item: a.cat-item__link(href="https://ya.ru" title="#{item.title}") !{item.title}
 					a.c-link-more(href="#" title="Посмотреть все 37 категорий")
 						span.c-link-more__inner Посмотреть все 37 категорий
 						+icon('arrow')
@@ -65,10 +65,3 @@ mixin categoryItem
 											|&nbsp;руб.
 									.c-goods__meta-item
 										+icon('arrow')
-
-
-				//- .col-5
-				//-	 img(src="//fakeimg.pl/120x140", alt="")
-
-
-//- mixin categoryItemAlter

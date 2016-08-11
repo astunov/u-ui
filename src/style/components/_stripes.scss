@@ -1,14 +1,12 @@
 /*********************************
 ** STRIPES
 **
-** VIEW https://gyazo.com/b274d1ddbfa872bc23cc16156498c9f9
-**
 ** DESC
 ** triangle bg with gradient getting by after&before
 **
 ** STRUCTURE
 ** .stripe * color&icon getting by additional class
-**   .stripe__body
+**   .c-stripe__body
 **      .stripe__title
 **   .stripe__right
 **     .stripe__count
@@ -18,13 +16,12 @@
 ** * Fix ie8,9,10 icon position
 *********************************/
 
-.stripe
+.c-stripe
 {
     font-size: $font-size-base;
     // magic number
     // lh from psd
     line-height: $font-size-base + 1;
-    transition: all, $baseAnimationDuration;
 
     position: relative;
     z-index: 2;
@@ -38,10 +35,20 @@
     height: 51px;
     padding: 0 10px;
 
+    transition: all, $baseAnimationDuration;
+
     color: #fff;
     border-radius: 5px;
-    &:hover, &:active, &:focus {
+    &:hover
+    {
         color: #fff;
+        box-shadow: 0 5px 15px #b8c0c4;
+    }
+    &:active,
+    &:focus
+    {
+        color: #fff;
+        box-shadow: 0 2px 6px #b8c0c4;
     }
     &:before
     {
@@ -88,7 +95,7 @@
         {
             border-left-color: #e50329;
         }
-        .stripe__body:before
+        .c-stripe__body:before
         {
             background: url(../i/components/stripes/i-stripe--offer.svg) center center no-repeat;
         }
@@ -99,7 +106,7 @@
         &:before
         {
             background-image: linear-gradient(to right, $brand-stock 0%, #652881 100%);
-        }.stripe__body:before
+        }.c-stripe__body:before
         {
             background: url(../i/components/stripes/i-stripe--stock.svg) center center no-repeat;
         }
@@ -114,9 +121,8 @@
         &:before
         {
             background-image: linear-gradient(to right, $brand-disc 0%, #fc6900 100%);
-        }.stripe__body:before
+        }.c-stripe__body:before
         {
-
             background: url(../i/components/stripes/i-stripe--disc.svg) center center no-repeat;
         }
         &:after

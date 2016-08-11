@@ -1,34 +1,33 @@
 /*********************************
 ** CATEGORY ITEM
-**
-** Structure
-**
 *********************************/
 
-.c-category-item
+.cat-item
 {
     position: relative;
-
     // sry for that
+
     height: 255px;
     margin-top: 5px;
     margin-bottom: 15px;
     padding-right: 20px;
     padding-left: 20px;
-
     // cursor: pointer;
     &:not(:first-of-type)
     {
         border-left: 1px solid $gray-light;
     }
     // border-bottom
-    &:before {
-      content: '';
-      position: absolute;
-      bottom: -25px;
-      left: 0;
-      right: 0;
-      border-bottom: 1px solid $gray-light;
+    &:before
+    {
+        position: absolute;
+        right: 0;
+        bottom: -25px;
+        left: 0;
+
+        content: '';
+
+        border-bottom: 1px solid $gray-light;
     }
     // get best fps perfomance
     &:after
@@ -51,10 +50,7 @@
     &:active
     {
         border-color: transparent;
-        // .p-icon--arrow
-        // {
-        //     color: $brand-primary;
-        // }
+
         & + .c-goods
         {
             border-color: transparent;
@@ -63,8 +59,9 @@
         {
             opacity: 1;
         }
-        &:before {
-          opacity: 0;
+        &:before
+        {
+            opacity: 0;
         }
     }
     // LAYOUT
@@ -159,4 +156,3 @@
         }
     }
 }
-

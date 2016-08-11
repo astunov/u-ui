@@ -1,36 +1,39 @@
 /*! Ulmart frontend v 0.1 */
 
 // Core: variables and mixins
-@import 'abstracts/_variables';
-@import 'abstracts/_mixins';
+@import 'abstracts/variables';
+@import 'abstracts/mixins';
 // just template — no need to import
-// 'abstracts/_svg-sprite-template';
+// 'abstracts/svg-sprite-template';
 
 // Base: reset and dependencies
-@import 'base/_normalize';
-@import 'base/_typo';
-@import 'base/_helpers';
-@import 'base/_svg-sprite';
+@import 'base/normalize';
+@import 'base/typo';
+@import 'base/helpers';
+@import 'base/svg-sprite';
 // TODO: change font load method
 // to local storage
-@import 'base/_fonts';
-
-// Components
-// all components in 1 file
-@import 'components/_0module'; // <--
+@import 'base/fonts';
 
 // Layout
-@import 'layout/_grid';
+@import 'layout/grid';
 
 // Pages
 // Modify l-page selector possibly
-@import 'pages/_default-page';
-@import 'pages/_ui-kit';
+@import 'pages/default-page';
+@import 'pages/ui-kit';
 // Themes
-@import 'themes/_t-dev';
+@import 'themes/t-dev';
 
 // Vendors
 // empty
+
+// Components
+// all components in 1 file
+@import 'components/0module'; // <--
+
+
+
 
 
 

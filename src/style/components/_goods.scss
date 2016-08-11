@@ -1,3 +1,7 @@
+/*********************************
+** GOODS ITEM
+*********************************/
+
 .c-goods
 {
     position: relative;
@@ -47,6 +51,15 @@
         &::after
         {
             opacity: 1;
+        }
+        .c-goods__price {
+          color: $gray-base;
+        }
+        .icon--arrow
+        {
+            // transform: translateX(20px);
+
+            transform: translate3d(20px, 0, 0);
         }
     }
     &--wide
