@@ -1,0 +1,15 @@
+article.grid-card
+  header.grid-card__header
+    .grid-card__header-inner
+      h2 !{dataCardBar.title}
+    if dataCardBar.moreTitle
+      .grid-card__header-inner
+        a.link-more(href="#" title="Посмотреть и отредактировать историю")
+          span.link-more__inner !{dataCardBar.moreTitle}
+          +icon('arrow')
+    if dataCardBar.slide
+      .grid-card__controls
+        a.slide.slide--prev(href="").left
+          +icon('caret')
+        a.slide.slide--next(href="").right
+          +icon('caret')

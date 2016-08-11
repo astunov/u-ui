@@ -1,0 +1,32 @@
+mixin resultFilter()
+	.c-card.c-bar-result
+		// left bar
+		.h-pl
+			.c-bar-result__item
+				.c-bar-result__sortby
+					| Сортировать по
+					select#selectId(name="selectName")
+						option(value="1") релевантности
+						option(value="2") новизне
+			.c-bar-result__item
+				| Программа лояльности:
+				+checkbox()
+				+checkbox()
+				+checkbox()
+
+
+		// right bar
+		.h-pr
+			.c-bar-result__item
+				.c-viewBy
+					.c-viewBy__title Вид каталога
+					ul.c-viewBy__list
+						li.c-viewBy__item
+							button.c-viewBy__btn
+								+icon('grid-square')
+						li.c-viewBy__item
+							button.c-viewBy__btn(href="")
+								+icon('grid-list')
+						li.c-viewBy__item
+							button.c-viewBy__btn(href="")
+								+icon('grid-compact')

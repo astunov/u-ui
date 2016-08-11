@@ -1,0 +1,113 @@
+// Collect all components in 1 file
+@import "_card";
+@import "_categories-menu";
+@import "_category-item";
+@import "_category-list";
+@import "_discBar";
+@import "_filterResultBar";
+@import "_filters";
+@import "_goods";
+@import "_inputs";
+@import "_stripes";
+
+@import "_icons";
+@import "_breadcrumbs";
+
+@import "_btn";
+
+@import "_discount-widget";
+
+@import "_controls";
+@import "_viewby";
+
+@import "_link-more";
+
+
+// Objects: universal
+// cross-project components
+@import "objects/_o-table";
+
+
+
+
+
+
+
+
+.pin
+{
+    font-size: 8px;
+    font-weight: 700;
+    line-height: 9px;
+
+    display: inline-block;
+
+    padding: 8px 10px;
+
+    border-radius: 5px;
+    &--default
+    {
+        color: $gray-darker;
+        background-color: #e2e8eb;
+    }
+}
+
+
+.brands
+{
+    &__item
+    {
+        display: inline-block;
+
+        transition: opacity $baseAnimationDuration;
+        img
+        {
+            max-height: 150px;
+            margin: 0 auto;
+
+            @extend .h-img-res;
+        }
+        &:hover,
+        &:active,
+        &:focus
+        {
+            opacity: .9;
+        }
+    }
+}
+
+.bannerBar
+{
+    margin: 20px 0;
+    img
+    {
+        @extend .h-img-res;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+.categoryBar
+{
+    margin-bottom: 35px;
+
+    background-color: #fff;
+}
+
+
+.topBar
+{
+    margin-bottom: 40px;
+    &__item
+    {
+        &--320
+        {
+            width: 320px;
+        }
+    }
+    &__title
+    {
+        margin: 0 0 15px;
+    }
+}
+

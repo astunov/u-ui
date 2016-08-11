@@ -1,0 +1,41 @@
+/*********************************
+** Link more
+*********************************/
+
+.c-link-more
+{
+    font-size: $font-size-small - 1;
+
+    color: $brand-secondary;
+    &__inner
+    {
+        display: inline-block;
+
+        transition: border-color, $baseAnimationDuration;
+
+        border-bottom: 1px solid transparent;
+    }
+    &:hover
+    {
+        color: $brand-secondary-hover;
+        .c-link-more__inner
+        {
+            border-color: $brand-secondary-hover;
+        }
+    }
+    &:active,
+    &:focus
+    {
+        color: $brand-secondary-hover;
+        .c-link-more__inner
+        {
+            border-color: $brand-secondary-hover;
+        }
+    }
+    .icon
+    {
+        // magic number
+        // space(3) + margin(7) = 10
+        margin-left: 7px;
+    }
+}

@@ -1,0 +1,54 @@
+extends ./_layout.jade
+block vars
+	- var array = {body_class:'t-dev', layout_mod:'', title:'UI KIT | Goods'}
+block content
+	+banner
+	+breadcrumbs
+	+pageTitle('Дом и ремонт')
+
+	//- +
+	+card
+		+cardBody
+			+cardGoods
+				+categoryItem
+				+categoryItem
+				+categoryItem
+			+cardGoods
+				+categoryItem
+				+categoryItem
+				+categoryItem
+			+cardGoods
+				+categoryItem
+				+categoryItem
+				+categoryItem
+	//- ./
+	//- +
+	+card()
+		+cardHeader({"title": "Специальные предложения", "linkTitle": "Посмотреть все"})
+		+cardBody()
+			+cardGoods()
+				+loop_while(4)
+					+goods({"classList": ['col-2']})
+				+goods({"classList": ['col-4', 'c-goods--wide'], "desc": true})
+			+cardGoods()
+				+loop_while(5)
+					+goods({"classList": ['col-2']})
+				+goodsShowMore
+	//- ./
+	//- +
+	+card()
+		+cardHeader({"title": "Новинки", "linkTitle": "Посмотреть все"})
+		+cardBody()
+			+cardGoods()
+				+loop_while(4)
+					+goods({"classList": ['col-2']})
+				+goods({"classList": ['col-4', 'c-goods--wide'], "desc": true})
+			+cardGoods()
+				+goods({"classList": ['col-4', 'c-goods--wide'], "desc": true})
+				+loop_while(3)
+					+goods({"classList": ['col-2']})
+				+goodsShowMore
+	//- ./
+
+
+

@@ -1,0 +1,18 @@
+mixin catWidget()
+	.c-cat-widget
+		h2.c-cat-widget__title
+			svg(xmlns="http://www.w3.org/2000/svg" width="24" height="24").
+				<defs>
+					<clipPath id="a">
+						<path d="M43 2005h4c5.523 0 10 4.48 10 10v4c0 5.52-4.477 10-10 10h-4c-5.523 0-10-4.48-10-10v-4c0-5.52 4.477-10 10-10z" fill="#fff"/>
+					</clipPath>
+				</defs>
+				<path d="M43 2005h4c5.523 0 10 4.48 10 10v4c0 5.52-4.477 10-10 10h-4c-5.523 0-10-4.48-10-10v-4c0-5.52 4.477-10 10-10z" fill="none" stroke-dasharray="0" stroke-linejoin="round" stroke-linecap="round" stroke="#e50329" stroke-miterlimit="50" stroke-width="2" clip-path="url(&quot;#a&quot;)" transform="translate(-33 -2005)"/>
+				<path d="M15.045 17.11s-5.17.02-6.55.03c-.187 0-.336-.15-.336-.34 0-.44.004-1.23.005-1.67 0-.19.15-.34.337-.34l4.204-.02-6.048-6.04c-.13-.13-.13-.35.002-.48.316-.31.872-.87 1.19-1.19.13-.13.343-.13.473 0l6.048 6.05.016-4.2c0-.19.15-.34.336-.34.446 0 1.23-.01 1.676-.01.185 0 .335.15.334.34l-.02 6.31-.006 1.56c0 .19-.15.34-.336.34h-1.325z" fill="#e50329"/>
+			| Юлмарт.Дисконт
+		ul.c-cat-widget__list
+			li.c-cat-widget__item
+				a.c-cat-widget__link(href="#")
+					| Уцененные товары из категории Инструмент #[span.badge.badge--link #{getRandomArbitrary(1, 150)}]
+		.c-cat-widget__desc
+			| Мы никогда не скрываем причин уценки и всегда публикуем информацию о состоянии товара. Экономьте.

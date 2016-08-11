@@ -1,0 +1,67 @@
+/*********************************
+** Base styles
+*********************************/
+
+body
+{
+    font-family: $font-family-sans-serif;
+    line-height: 1.2;
+}
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6
+{
+    font-family: $headings-font-family;
+    font-weight: 600;
+    // margins plz
+    // temp
+
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+h1,
+.h1
+{
+    font-size: $font-size-h1;
+}
+h2,
+.h2
+{
+    font-size: $font-size-h2;
+}
+h3,
+.h3
+{
+    font-size: $font-size-h3;
+}
+
+a
+{
+    transition-duration: $baseAnimationDuration;
+    transition-property: color;
+    text-decoration: none;
+
+    color: $brand-secondary;
+    outline: none;
+    &:hover
+    {
+        color: $brand-primary;
+    }
+    &:focus,
+    &:active
+    {
+        color: $brand-primary;
+    }
+}

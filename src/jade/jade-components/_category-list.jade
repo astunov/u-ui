@@ -1,0 +1,36 @@
+-
+  var categoryListData =
+    [
+      {"title" : "Автомобильный звук и видео",
+      "link": "#",},
+      {"title" : "Аккумуляторные батареи",
+      "link": "#",},
+      {"title" : "Аксессуары для бытовой техники",
+      "link": "#",},
+      {"title" : "Встраиваемая бытовая техника",
+      "link": "#",},
+      {"title" : "Дача и сад",
+      "link": "#",},
+      {"title" : "Крупная бытовая техника",
+      "link": "#",},
+      {"title" : "Мелкая техника для кухни",
+      "link": "#",},
+      {"title" : "Подбор автозапчастей",
+      "link": "#",},
+      {"title" : "Приготовление кофе",
+      "link": "#",},
+      {"title" : "Техника для дома",
+      "link": "#",},
+      {"title" : "Товары для здоровья",
+      "link": "#",},
+      {"title" : "Товары для красоты",
+      "link": "#",}
+    ]
+
+h3.h3 Bosch в других разделах
+.widget
+  h3.h3 Bosch в других разделах
+  ul.category-list
+    each item in categoryListData
+      li.category-list__item
+        a.category-list__link(href="#" title="#{item.title}") !{item.title}

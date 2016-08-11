@@ -1,0 +1,25 @@
+.o-tb
+{
+    display: table;
+
+    width: 100%;
+    &__row
+    {
+        display: table-row;
+    }
+    &__td
+    {
+        display: table-cell;
+        &.is--middle
+        {
+            vertical-align: middle;
+        }
+        &.is--top
+        {
+            vertical-align: top;
+        }
+        &.is--bottom {
+            vertical-align: bottom;
+        }
+    }
+}

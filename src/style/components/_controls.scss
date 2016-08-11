@@ -1,0 +1,47 @@
+/*********************************
+**
+** CONTROLS
+**
+*********************************/
+
+.c-slide
+{
+    line-height: 28px;
+
+    display: inline-block;
+
+    width: 28px;
+    height: 28px;
+
+    text-align: center;
+    vertical-align: middle;
+
+    color: #6f6f6f;
+    border-radius: 100%;
+    background-color: #edf2f4;
+
+    outline: none;
+    .icon
+    {
+        font-size: 8px;
+    }
+    & + &
+    {
+        // magic number
+        // to get 5px with space
+        margin-left: 2px;
+    }
+
+    &--next {
+      .icon
+      {
+          transform: rotate(180deg);
+      }
+    }
+
+    &--prev {
+      .icon
+      {
+      }
+    }
+}

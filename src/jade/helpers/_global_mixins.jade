@@ -1,0 +1,19 @@
+-
+	function getRandomArbitrary(min, max) {
+		return Math.floor(Math.random() * (max - min + 1)) + min;
+	}
+
+mixin loop_while(counter)
+	- i=0;
+	while i < counter
+		-i++;
+		block
+
+mixin initArgs(content)
+	- content = content || '';
+	console.log()
+
+
+
+
+

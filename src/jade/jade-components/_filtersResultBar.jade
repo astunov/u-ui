@@ -1,0 +1,25 @@
+.widget
+  .row.filterResultBar
+      .col.col-12
+        .filterResultBar__left
+              .filterResultBar__item
+                .sortby
+                  | Сортировать по
+                  select
+                    option релевантности
+              .filterResultBar__item
+                .superSortBy
+                  | Суперцена
+        .filterResultBar__right
+          .viewBy
+            .viewBy__title Вид каталога
+            ul.viewBy__list
+              li.viewBy__item
+                button.viewBy__btn(role="btn")
+                  +icon('grid-square')
+              li.viewBy__item
+                button.viewBy__btn(role="btn")
+                  +icon('grid-list')
+              li.viewBy__item
+                button.viewBy__btn(role="btn")
+                  +icon('grid-compact')

@@ -1,0 +1,17 @@
+//- +
++card()
+  +cardHeader({"title": "Рекомендовано для вас, Валентина", "controls": true})
+  +cardBody()
+    +cardGoods()
+      +loop_while(6)
+        +goods({"classList": ['col-2']})
+//- ./
+//- +
++card()
+  +cardHeader({"title": "Последние просмотренные", "linkTitle": "Посмотреть и отредактировать историю", "controls": true })
+  +cardBody()
+    +cardGoods()
+      +loop_while(8)
+        +goods({"classList": ['col-1_8'], "thumbOnly": true})
+//- ./
+include ./_discBar.jade

@@ -1,0 +1,145 @@
+/*********************************
+** FILTERS
+*********************************/
+
+.c-filters
+{
+    box-sizing: border-box;
+    padding: 25px 20px;
+
+    background-color: #fff;
+    &__title
+    {
+        font-family: Arial;
+        font-size: $font-size-base;
+        font-weight: 700;
+        line-height: $font-size-base + 3;
+        // padding-top: 5px;
+
+        display: block;
+
+        margin-bottom: 15px;
+
+        text-decoration: none;
+
+        color: #000;
+        &--is-closed
+        {
+            .p-icon--arrow
+            {
+                transform: scaleY(-1);
+            }
+        }
+        .p-icon--arrow
+        {
+            width: 8px;
+            padding-right: 14px;
+            padding-left: 4px;
+
+            transition: all, $baseAnimationDuration;
+
+            fill: #5f5f5f;
+        }
+        &:hover,
+        &:active,
+        &:focus
+        {
+            color: currentColor;
+        }
+    }
+    &__group
+    {
+        margin: 0;
+        padding: 0;
+
+        border: none;
+
+         box-sizing: border-box;
+
+         max-width: 185px;
+        &:not(:last-of-type)
+        {
+            margin-bottom: 20px;
+            padding-bottom: 20px;
+
+            border-bottom: 1px solid #efefef;
+        }
+
+        &--accent {
+           // padding: 25px 10px 25px 20px;
+            max-width: none;
+
+          .c-filters__item {
+            &:not(:last-of-type) {
+              margin-bottom: 20px;
+            }
+          }
+          .c-filters__link {
+            font-size: $font-size-base;
+            font-weight: 700;
+          }
+        }
+    }
+    &__reset
+    {
+        font-size: $font-size-el-clasico;
+
+        // display: none;
+
+        text-decoration: none;
+        margin-top: 10px;
+        color: #008fd5;
+        border-bottom: 1px dotted #008fd5;
+        &:hover,
+        &:active,
+        &:focus
+        {
+            color: #0077b3;
+        }
+    }
+    &__list
+    {
+        margin: 0;
+        padding: 0;
+    }
+    &__item
+    {
+        display: block;
+        &:not(:last-of-type)
+        {
+            margin-bottom: 12px;
+        }
+        // &:last-of-type {
+        //     margin-bottom: 15px;
+        // }
+    }
+    &__link
+    {
+        font-size: $font-size-el-clasico;
+
+        color: $gray-base;
+        display: inline-block;
+
+        line-height: $font-size-el-clasico + 4;
+        // span
+        // {
+        //     font-size: $font-size-small - 1;
+
+        //     color: $gray-ligther;
+        // }
+    }
+}
+
+
+.c-form-group
+{
+    margin-bottom: 16px;
+}
+
+.c-filters__group
+{
+    .c-form-group:last-of-type
+    {
+        margin-bottom: 0;
+    }
+}

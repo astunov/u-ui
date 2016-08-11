@@ -1,0 +1,47 @@
+/*********************************
+** UI KIT
+**
+*********************************/
+
+.fl-row
+{
+    display: flex;
+
+    margin-bottom: 20px;
+
+    flex-wrap: wrap;
+    & > *:not(:first-of-type)
+    {
+        margin-left: 30px;
+    }
+}
+
+.u-box
+{
+    width: 84px;
+    height: 84px;
+    &--primary
+    {
+        background-color: $brand-primary;
+    }
+    &--gray-base
+    {
+        background-color: $gray-base;
+    }
+    &--gray-darker
+    {
+        background-color: $gray-darker;
+    }
+    &--gray-ligther
+    {
+        background-color: $gray-ligther;
+    }
+    &--secondary
+    {
+        background-color: $brand-secondary;
+    }
+    &--success
+    {
+        background-color: $brand-success;
+    }
+}

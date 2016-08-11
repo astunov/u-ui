@@ -1,0 +1,42 @@
+include _page-title
+include _bannerBar
+
+
+include _breadcrumbs
+include _card
+include _goods
+include _goods-show-more
+include _category-item
+
+include _l-sidebar
+include _discount-widget
+
+include _l-main
+include _brands
+include _result-filter
+
+//- TOO SMALL TO GET OWN FILE
+
+mixin checkbox(title, attr)
+	- attr = attr || {}
+	- attr.id = attr.id || 'fk' + getRandomArbitrary(1, 300)
+	article.js-checkbox.checkbox(role="checkbox" aria-checked="false" tabindex="0")
+		input.checkbox__input(type="checkbox" name="#{attr.id}")&attributes(attr)
+		label.checkbox__label(for="#{attr.id}")
+			+icon('approve')
+			if title
+				span.checkbox__label-title !{title}
+
+mixin radio(title, attr)
+	- attr = attr || {}
+	- attr.id = attr.id || 'fk' + getRandomArbitrary(1, 300)
+	.js-radio.radio(role="radio" aria-checked="false" tabindex="0")
+		input.radio__input(type="radio" id="#{attr.id}")&attributes(attr)
+		label.radio__label(for="#{attr.id}")
+			if title
+				span.radio__label-title !{title}
+
+mixin icon(name,mod)
+	- mod = mod || ''
+	svg(class="icon icon--" + name + ' ' + mod)
+		use(xlink:href="i/sprite/sprite.svg#" + name)

@@ -1,0 +1,169 @@
+/*********************************
+** STRIPES
+**
+** VIEW https://gyazo.com/b274d1ddbfa872bc23cc16156498c9f9
+**
+** DESC
+** triangle bg with gradient getting by after&before
+**
+** STRUCTURE
+** .stripe * color&icon getting by additional class
+**   .stripe__body
+**      .stripe__title
+**   .stripe__right
+**     .stripe__count
+** TODO
+** * Fix ie8,9,10 arrow bg -> probably addinitial file
+** with png gradien fallback
+** * Fix ie8,9,10 icon position
+*********************************/
+
+.stripe
+{
+    font-size: $font-size-base;
+    // magic number
+    // lh from psd
+    line-height: $font-size-base + 1;
+    transition: all, $baseAnimationDuration;
+
+    position: relative;
+    z-index: 2;
+
+    display: table;
+    overflow: hidden;
+
+    box-sizing: border-box;
+    width: 100%;
+    min-width: 320px;
+    height: 51px;
+    padding: 0 10px;
+
+    color: #fff;
+    border-radius: 5px;
+    &:hover, &:active, &:focus {
+        color: #fff;
+    }
+    &:before
+    {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+
+        width: 240px;
+
+        content: '';
+    }
+    &:after
+    {
+        position: absolute;
+        left: 240px;
+
+        width: 0;
+        height: 0;
+
+        content: '';
+
+        border-top: 25.5px solid transparent;
+        border-bottom: 25.5px solid transparent;
+        border-left: 20px solid transparent;
+    }
+    &:not(:last-of-type)
+    {
+        margin-bottom: 7px;
+    }
+    &--default
+    {
+        background-color: $brand-primary;
+    }
+    &--offer
+    {
+        background-color: $brand-offer;
+        &:before
+        {
+            background-image: linear-gradient(105deg, $brand-offer 0%, #e50329 100%);
+        }
+        &:after
+        {
+            border-left-color: #e50329;
+        }
+        .stripe__body:before
+        {
+            background: url(../i/components/stripes/i-stripe--offer.svg) center center no-repeat;
+        }
+    }
+    &--stock
+    {
+        background-color: $brand-stock;
+        &:before
+        {
+            background-image: linear-gradient(to right, $brand-stock 0%, #652881 100%);
+        }.stripe__body:before
+        {
+            background: url(../i/components/stripes/i-stripe--stock.svg) center center no-repeat;
+        }
+        &:after
+        {
+            border-left-color: #652881;
+        }
+    }
+    &--disc
+    {
+        background-color: $brand-disc;
+        &:before
+        {
+            background-image: linear-gradient(to right, $brand-disc 0%, #fc6900 100%);
+        }.stripe__body:before
+        {
+
+            background: url(../i/components/stripes/i-stripe--disc.svg) center center no-repeat;
+        }
+        &:after
+        {
+            border-left-color: #fc6900;
+        }
+    }
+    &__body
+    {
+        position: relative;
+
+        display: table-cell;
+
+        box-sizing: border-box;
+        width: 220px;
+        padding-left: 70px;
+
+        vertical-align: middle;
+        &:before
+        {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+
+            width: 60px;
+            height: 100%;
+
+            content: '';
+        }
+    }
+    &__right
+    {
+        display: table-cell;
+
+        min-width: 80px;
+
+        text-align: right;
+        vertical-align: middle;
+    }
+    &__count
+    {
+        font-size: $font-size-el-clasico;
+        .icon
+        {
+            position: relative;
+            top: -1px;
+        }
+    }
+}

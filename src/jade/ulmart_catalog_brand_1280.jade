@@ -1,0 +1,20 @@
+extends ./_layout.jade
+block vars
+	- var array = {body_class:'t-dev', layout_mod:'', title:'UI KIT | Goods'}
+block content
+	+banner
+	+breadcrumbs([{"title": "Дом и ремонт"}, {"title": "Инструмент"}])
+	+pageTitle('Bosch')
+
+	.l-page__wrapper
+		+sidebar
+			.l-sidebar__item
+					+categoryMenu(offerBrandCategories)
+			.l-sidebar__item
+				.h3 Bosch в других разделах
+					+categoryInCategory(anotherCat)
+		+main
+			+resultFilter
+			.c-card
+				img.h-img-res(src="i/fakeimg/fakegoods.png" alt="")
+	+banner

@@ -1,0 +1,31 @@
+mixin card
+	.c-card
+		block
+
+
+mixin cardHeader(content)
+	- content = content || {"title": "Новинки", "linkTitle": "Посмотреть ещё", "controls": true}
+	.c-card__header
+		.c-card__header-inner
+			if content.title
+				.c-card__header-td
+					h2.c-card__title #{content.title}
+			if content.linkTitle
+				.c-card__header-td
+					a.c-link-more(href="#" title="")
+						span.c-link-more__inner #{content.linkTitle}
+						+icon('arrow')
+		if content.controls
+			.c-card__controls
+				button.c-slide.c-slide--prev(type="button")
+					+icon('slider-control')
+				button.c-slide.c-slide--next(type="button")
+					+icon('slider-control')
+
+mixin cardBody()
+	.c-card__body
+		block
+
+mixin cardGoods()
+	.c-card__row
+		block

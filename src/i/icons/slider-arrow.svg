@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" id="SvgjsSvg1000" version="1.1" width="12" height="21.5">
+  <defs id="SvgjsDefs1001">
+    <filter id="SvgjsFilter1008" width="200" height="200" x="-50" y="-50">
+      <feGaussianBlur id="SvgjsFeGaussianBlur1009" stdDeviation="0" result="SvgjsFeGaussianBlur1009Out" in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <path id="SvgjsPath1007" d="M943.32 374.04L934.67 365.5 933 367.15 941.65 375.69 933.39 383.85 935.07 385.5 945 375.69Z" fill="#000000" fill-opacity="0.6" filter="url(#SvgjsFilter1008)" transform="matrix(1,0,0,1,-933,-364)"/>
+  <path id="SvgjsPath1010" d="M943.32 373.04L934.67 364.5 933 366.15 941.65 374.69 933.39 382.85 935.07 384.5 945 374.69Z" fill="#ffffff" transform="matrix(1,0,0,1,-933,-364)"/>
+</svg>

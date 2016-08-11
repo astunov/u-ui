@@ -1,0 +1,51 @@
+extends ./_layout.jade
+block vars
+	- var array = {body_class:'t-dev', layout_mod:'', title:'UI KIT | Goods'}
+block content
+	.topBar.o-tb
+		.o-tb__row
+			.topBar__item.o-tb__td.is--middle
+				h1.topBar__title Все разделы
+			.topBar__item.topBar__item--320.o-tb__td.is--middle
+				h2.topBar__title Экономь с Юлмарт
+		.o-tb__row
+			.topBar__item.o-tb__td.is--top
+				include jade-components/_categoriesList.jade
+			.topBar__item.topBar__item--320.o-tb__td.is--top
+				include jade-components/_stripes.jade
+
+	+banner
+	+pageTitle('Дом и ремонт', 'h2')
+	//- +
+	+card
+		+cardBody
+			+cardGoods
+				+categoryItem
+				+categoryItem
+				+categoryItem
+			+cardGoods
+				+categoryItem
+				+categoryItem
+				+categoryItem
+			+cardGoods
+				+categoryItem
+				+categoryItem
+				+categoryItem
+	//- ./
+	+banner
+	+pageTitle('Дача', 'h2')
+	+card
+		+cardBody
+			+cardGoods
+				+categoryItem
+				+categoryItem
+				+categoryItem
+			+cardGoods
+				+categoryItem
+				+categoryItem
+				+categoryItem
+			+cardGoods
+				+categoryItem
+				+categoryItem
+				+categoryItem
+	//- ./

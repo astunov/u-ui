@@ -1,0 +1,50 @@
+/*********************************
+**
+** VIEW BY
+**
+*********************************/
+
+.c-viewBy
+{
+    // ELEMENTS
+    &__title
+    {
+        display: inline-block;
+
+        vertical-align: middle;
+    }
+    &__title + &__list
+    {
+        padding-left: 25px;
+    }
+    &__list
+    {
+        font-size: 0;
+
+        display: inline-block;
+
+        margin: 0 -5px;
+        padding: 0;
+
+        vertical-align: middle;
+    }
+    &__item
+    {
+        display: inline-block;
+
+        padding: 0 5px;
+        .icon
+        {
+            font-size: 17px;
+        }
+    }
+    &__btn
+    {
+        color: $gray-ligther;
+        outline: none;
+        &:hover
+        {
+            color: $brand-primary;
+        }
+    }
+}

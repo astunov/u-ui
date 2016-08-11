@@ -1,0 +1,41 @@
+$t-outline-color: LightSalmon;
+$t-background-color: LightGreen;
+
+.t-dev
+{
+    background-color: #f3f7f9;
+    // C-CARDS
+    //     .c-card
+    //     {
+    //         &__header
+    //         {
+    //             outline: 1px dashed $t-outline-color;
+    //         }
+    //         &__goods
+    //         {
+    //             outline: 1px dashed $t-outline-color;
+    //         }
+    //     }
+    //     // C-GOODS
+    //     .c-goods
+    //     {
+    //         // outline: 1px solid $t-outline-color;
+    //         // background-color: $t-background-color;
+    //     }
+    //     .c-category-item
+    //     {
+    //         outline: 1px dashed $t-outline-color;
+    //     }
+    //     .o-tb__row
+    //     {
+    //         outline: 1px dashed $t-outline-color;
+    //     }
+    //     .o-tb__td
+    //     {
+    //         outline: 1px dashed $t-outline-color;
+    //     }
+    .radio:focus, .checkbox:focus
+    {
+        outline: 1px dashed $t-outline-color;
+    }
+}

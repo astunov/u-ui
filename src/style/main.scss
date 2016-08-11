@@ -1,0 +1,46 @@
+/*! Ulmart frontend v 0.1 */
+
+// Core: variables and mixins
+@import 'abstracts/_variables';
+@import 'abstracts/_mixins';
+// just template — no need to import
+// 'abstracts/_svg-sprite-template';
+
+// Base: reset and dependencies
+@import 'base/_normalize';
+@import 'base/_typo';
+@import 'base/_helpers';
+@import 'base/_svg-sprite';
+// TODO: change font load method
+// to local storage
+@import 'base/_fonts';
+
+// Components
+// all components in 1 file
+@import 'components/_0module'; // <--
+
+// Layout
+@import 'layout/_grid';
+
+// Pages
+// Modify l-page selector possibly
+@import 'pages/_default-page';
+@import 'pages/_ui-kit';
+// Themes
+@import 'themes/_t-dev';
+
+// Vendors
+// empty
+
+
+
+
+
+// QUARANTINE STYLES
+
+.badge {
+  &--link {
+    font-size: $font-size-small - 1;
+    color: $gray-ligther;
+  }
+}

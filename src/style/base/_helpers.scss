@@ -1,0 +1,46 @@
+/*********************************
+** HELPERS CLASESS
+** h-selector
+*********************************/
+
+.h-img-res
+{
+    display: block;
+
+    max-width: 100%;
+    height: auto;
+}
+
+.h-text
+{
+    &-center
+    {
+        text-align: center;
+    }
+    &-right
+    {
+        text-align: right;
+    }
+}
+.h-block-center
+{
+    margin: 0 auto;
+}
+
+.h-pl
+{
+    float: left !important;
+}
+.h-pr
+{
+    float: right !important;
+}
+
+.h-no-padding
+{
+    padding: 0!important;
+}
+.h-inline
+{
+    display: inline-block !important;
+}

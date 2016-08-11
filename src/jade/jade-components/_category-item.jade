@@ -1,0 +1,74 @@
+mixin categoryItem
+	-
+		var categoryItemData =
+		[
+			{
+				"title": "Шуруповерты и гайковерты",
+				"link": "",
+			},
+			{
+				"title": "Перфораторы",
+				"link": "",
+			},
+			{
+				"title": "Углошлифмашины",
+				"link": "",
+			},
+			{
+				"title": "Измерительная техника",
+				"link": "",
+			},
+			{
+				"title": "Сварочное оборудование",
+				"link": "",
+			},
+			{
+				"title": "Генераторы",
+				"link": "",
+			},
+			{
+				"title": "Ручной инструмент, лестницы",
+				"link": "",
+			}
+		]
+
+		var src = ['https://p.fast.ulmart.ru/p/mid/361/36141/3614161.jpg', 'https://p.fast.ulmart.ru/p/mid/346/34669/3466952.jpg', 'https://p.fast.ulmart.ru/p/mid/393/39346/3934603.jpg', 'https://p.fast.ulmart.ru/p/mid/54/5447/544746.jpg', 'https://p.fast.ulmart.ru/p/mid/54/5447/544746.jpg', 'https://p.fast.ulmart.ru/p/mid/387/38736/3873601.jpg', 'https://p.fast.ulmart.ru/p/mid/369/36966/3696611.jpg', 'https://p.fast.ulmart.ru/p/mid/393/39340/3934084.jpg', 'https://p.fast.ulmart.ru/p/mid/371/37174/3717410.jpg', 'https://p.fast.ulmart.ru/p/gen/384/38491/3849144.jpg', 'https://p.fast.ulmart.ru/p/gen/359/35901/3590112.jpg', 'https://p.fast.ulmart.ru/p/gen/373/37395/3739594.jpg', 'https://p.fast.ulmart.ru/p/gen/53/5395/539580.jpg', 'https://p.fast.ulmart.ru/p/gen/368/36897/3689792.jpg', 'https://p.fast.ulmart.ru/p/gen/368/36876/3687600.jpg', 'https://p.fast.ulmart.ru/p/gen/364/36413/3641380.jpg', 'https://p.fast.ulmart.ru/p/gen/360/36093/3609337.jpg', 'https://p.fast.ulmart.ru/p/gen/359/35943/3594352.jpg', 'https://p.fast.ulmart.ru/p/gen/369/36966/3696610.jpg']
+		var title = [
+			'Ноутбук ASUS X553SA, 90NB0AC1-M02840', 'Телевизор LG 43LF510V', 'Планшетный компьютер Lenovo Tab 2 A7-30 8Gb ', 'Подгузники Pampers Active Baby-Dry 6 (15+ кг), ', 'Кровать надувная INTEX Royal 68755, ', 'ноутбук HP 15-ac071ur, P3S70EA', 'пылесос Midea VCC 35A01K', 'ноутбук HP 15-ac150ur, P7R39EA', 'Нож сантоку Sabatier Lyrae 18 см', 'Моторное масло Mobil SUPER 3000 X1 5W/40, 4', 'Смартфон LG Class H650E Silver', 'кондиционер Electrolux EACS-07HLO/N3', 'Бассейн INTEX EASY SET 28132 366х76см', 'ноутбук HP 15-ac665ur, W4X66EA', 'Электрический мопед ET красный', 'ноутбук HP 15-af152ur, W4X36EA', 'Телевизор Philips 40PFT4100/60', 'Велосипед Stinger Highlander 100V 26 (2016)', 'Пароварка-блендер Philips Avent SCF870/22', 'Игровая консоль Microsoft Xbox One, 500 ГБ + игра '
+		]
+		var randomImg = getRandomArbitrary(0, src.length - 1);
+		var randomTitle = getRandomArbitrary(0, title.length - 1);
+
+	article.col.col-4.c-category-item
+		header.c-category-item__header
+			h3.c-category-item__title.h3: a.c-category-item__title-link(href="#") Инструменты
+		div.c-category-item__body.o-tb
+			.o-tb__row
+				.o-tb__td.col-7.is--top
+					ul.c-category-item__list
+						each item in categoryItemData
+							li.c-category-item__list-item: a.c-category-item__link(href="https://ya.ru" title="#{item.title}") !{item.title}
+					a.c-link-more(href="#" title="Посмотреть все 37 категорий")
+						span.c-link-more__inner Посмотреть все 37 категорий
+						+icon('arrow')
+				.o-tb__td.col-5.is--bottom
+					a.c-goods(href="" title="")
+							.c-goods__thumb.c-goods__thumb--tiny
+
+								img(src="#{src[randomImg]}", alt="")
+							.c-goods__body.no-padding
+								.c-goods__title #{title[randomTitle]}
+								.c-goods__meta
+									.c-goods__meta-item
+										.c-goods__price
+											strong 18 990
+											|&nbsp;руб.
+									.c-goods__meta-item
+										+icon('arrow')
+
+
+				//- .col-5
+				//-	 img(src="//fakeimg.pl/120x140", alt="")
+
+
+//- mixin categoryItemAlter

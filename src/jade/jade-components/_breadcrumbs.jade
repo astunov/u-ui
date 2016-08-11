@@ -1,0 +1,18 @@
+mixin breadcrumbs(content)
+	- content = content || []
+	- var attr = (content.length > 0) ? {"href" : "./ulmart_catalog_section_1280.html"} : {}
+	.c-breadcrumbs
+		a.c-breadcrumbs__link&attributes(attr)
+			.c-breadcrumbs__home-wrapper
+				+icon('map')
+			+icon('arrow')
+		each item, number in content
+			if number !== content.length - 1
+				a.c-breadcrumbs__link(href="#")
+					span.c-breadcrumbs__inner #{item.title}
+					+icon('arrow')
+			else
+				a.c-breadcrumbs__link.is--active()
+					span.c-breadcrumbs__inner #{item.title}
+					+icon('arrow')
+

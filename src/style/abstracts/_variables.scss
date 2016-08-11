@@ -1,0 +1,65 @@
+//
+// VARIABLES
+// --------------------------------------------------
+
+
+//== Colors
+//
+//## Gray and brand colors for use across Ulmart theme.
+
+
+$gray-base: #000;
+$gray-darker: #5f5f5f;
+$gray-ligther: #a1a1a1;
+$gray-light: #efefef;
+
+
+$brand-primary: #e50329;
+$brand-secondary: #008fd5;
+$brand-success: #30ab80;
+
+// uses in stripes
+$brand-offer: #ff4f6c;
+$brand-stock: #a648ab;
+$brand-disc: #fe8e3c;
+
+// _______________ color carantin
+
+// uses in categoty-item
+$brand-secondary-hover: #0077b3;
+
+
+
+
+
+
+
+$font-family-sans-serif:  Arial, Helvetica, sans-serif;
+$headings-font-family:  'PFBeauSansPro', Arial, Helvetica, sans-serif;
+
+
+
+$line-height-base: 1.2;
+
+$font-size-base: 14px;
+// classic fz for web
+$font-size-el-clasico: 13px;
+$font-size-large: 16px;
+$font-size-small: 12px;
+$font-size-extra-small: 10px;
+
+
+$font-size-h1: 32px;
+$font-size-h2: 22px;
+$font-size-h3: 18px;
+
+
+// Hover effects, fading, scaling
+$baseAnimationDuration: .2s;
+
+// Hover effects offer/tag
+$baseBoxShadow: 0 5px 15px #b8c0c4;
+
+
+//
+$heigth-goods: 229px;

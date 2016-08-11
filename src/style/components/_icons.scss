@@ -1,0 +1,24 @@
+/*********************************
+** ICONS
+** ALL CUSTOM STYLES
+** CHANGE HERE
+** DON'T CHANGE SPRITE.SCSS
+*********************************/
+
+.icon
+{
+    display: inline-block;
+
+    width: 1em;
+    height: 1em;
+
+    vertical-align: middle;
+
+    fill: currentColor;
+
+    transition: color $baseAnimationDuration;
+
+    &--arrow {
+      font-size: 8px;
+    }
+}

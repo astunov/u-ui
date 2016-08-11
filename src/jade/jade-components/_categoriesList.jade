@@ -1,0 +1,44 @@
+-
+	var dataCategories = [
+		{
+			"title" : "Дом и ремонт",
+		},
+		{
+			"title" : "Дача",
+		},
+		{
+			"title" : "Домашние животные",
+		},
+		{
+			"title" : "Автотовары и запчасти",
+		},
+		{
+			"title" : "Одежда и красота",
+		},
+		{
+			"title" : "Компьютеры и игры",
+		},
+		{
+			"title" : "Спорт, Рыбалка и туризм",
+		},
+		{
+			"title" : "Мобильная техника",
+		},
+		{
+			"title" : "Контент",
+		},
+		{
+			"title" : "Родителям и детям",
+		},
+		{
+			"title" : "Электроника и бытовая техника Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+		}
+	]
+.c-cat-menu
+	ul.c-cat-menu__list
+		each item in dataCategories
+			li.c-cat-menu__item
+				a.c-cat-menu__link(href="#")
+					.c-cat-menu__link-inner
+						+icon('grid-list')
+						.c-cat-menu__link-title !{item.title}

@@ -1,0 +1,118 @@
+/*********************************
+** BREADCRUMBS
+**
+** STRUCTURE
+** .c-breadcrumbs
+**    &__link * single item *
+**        &__home-wrapper * wrapper for home link *
+**            &__inner
+**    &__link
+**        &__inner
+**
+*********************************/
+
+.c-breadcrumbs
+{
+    margin-bottom: 20px;
+    &__home-wrapper
+    {
+        font-size: $font-size-small;
+        line-height: 26px;
+
+        position: relative;
+        //magic number
+        // vertical align in row
+        top: -1px;
+
+        display: inline-block;
+
+        width: 26px;
+        height: 26px;
+
+        text-align: center;
+
+        border-radius: 100%;
+        background-color: #fff;
+        .icon--map
+        {
+            font-size: $font-size-el-clasico;
+
+            vertical-align: -2px;
+        }
+    }
+    &__link
+    {
+        font-size: $font-size-el-clasico;
+        line-height: 1;
+
+        display: inline-block;
+        // magic number
+        // margin + icon size(6) + space(3) = 30px
+
+        margin-right: 21px;
+
+        transition: all, $baseAnimationDuration;
+        text-decoration: none;
+
+        color: $brand-secondary;
+        .icon--arrow
+        {
+            position: relative;
+            left: 8px;
+
+            color: $gray-ligther;
+            &:before
+            {
+                display: inline-block;
+
+                width: 1px;
+                height: 2px;
+                padding-left: 5px;
+
+                content: '';
+            }
+        }
+        &:last-of-type
+        {
+            .icon--arrow
+            {
+                // magic number
+                // valign
+                bottom: 1px;
+                // magic number
+                // space(3) + 2 = 5
+                left: 2px;
+
+                transform: rotate(90deg);
+            }
+        }
+        &:hover,
+        &:active,
+        &:focus
+        {
+            color: #0077b3;
+            .c-breadcrumbs__inner
+            {
+                border-color: #0077b3;
+            }
+        }
+        &.is--active
+        {
+            cursor: default;
+            .c-breadcrumbs__inner
+            {
+                border: none;
+            }
+        }
+    }
+    &__inner
+    {
+        transition: all, $baseAnimationDuration;
+
+        border-bottom: 1px solid transparent;
+    }
+    .icon--arrow
+    {
+        font-size: 8px;
+    }
+}

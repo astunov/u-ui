@@ -1,0 +1,69 @@
+extends ./_layout.jade
+block vars
+	- var array = {body_class:'t-dev', layout_mod:'', title:'UI KIT | Goods'}
+block content
+	+banner
+	+breadcrumbs([{"title": "Дом и ремонт"}, {"title": "Инструмент"}])
+	+pageTitle('Электроинструмент и бензоинструмент')
+
+	.l-page__wrapper
+
+		+sidebar
+			.l-sidebar__item
+				+categoryMenu(offerSubCategories, false)
+			.l-sidebar__item
+				+catWidget
+
+		+main
+			//- +
+			+card
+				+cardHeader({"title": "Рекомендованные товары", "linkTitle": "Посмотреть все"})
+				+cardBody
+					+cardGoods
+						+loop_while(2)
+							+goods({"classList": ['col-6', 'c-goods--wide'], "desc": true})
+					+cardGoods
+						+loop_while(5)
+							+goods({"classList": ['col-1_5']})
+			//- ./
+					//- +
+			+card
+				+cardBody
+					+brands
+			//- ./
+			//- +
+			+card
+				+cardHeader({"title": "Популярные категории", "controls": true})
+				+cardBody
+					+cardGoods
+							+loop_while(5)
+								a.col.col-1_5.c-goods(href="" title="")
+										.c-goods__thumb.c-goods__thumb--default
+											img(src="https://p.fast.ulmart.ru/p/mid/361/36141/3614161.jpg" alt="")
+										.c-goods__body
+											.c-goods__title.h-text-center Ноутбук ASUS X553SA, 90NB0AC1-M02840&nbsp;#[span.badge.badge--link #{getRandomArbitrary(1, 150)}]
+			//- ./
+			+banner
+			//- +
+			+card
+				+cardHeader({"title": "Специальные предложения", "linkTitle": "Посмотреть все"})
+				+cardBody
+					+cardGoods
+						+loop_while(5)
+							+goods({"classList": ['col-1_5']})
+					+cardGoods
+						+loop_while(5)
+							+goods({"classList": ['col-1_5']})
+			//- ./
+			//- +
+			+card
+				+cardHeader({"title": "Новинки", "linkTitle": "Посмотреть все"})
+				+cardBody
+					+cardGoods
+						+loop_while(5)
+							+goods({"classList": ['col-1_5']})
+					+cardGoods
+						+loop_while(5)
+							+goods({"classList": ['col-1_5']})
+			//- ./
+	+banner

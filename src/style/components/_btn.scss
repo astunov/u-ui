@@ -1,0 +1,273 @@
+/*********************************
+** BUTTONS
+*********************************/
+// .p-theme
+// {
+//     .p-btn
+//     {
+//         font-family: Arial;
+//         font-size: 12px;
+//         line-height: 1;
+
+//         display: inline-block;
+
+//         box-sizing: border-box;
+//         margin-bottom: 0;
+//         padding: 8px 30px;
+
+//         cursor: pointer;
+//         user-select: none;
+//         transition: all, $baseAnimationDuration;
+//         text-align: center;
+//         vertical-align: middle;
+//         white-space: nowrap;
+//         text-decoration: none;
+
+//         color: inherit;
+//         border: 1px solid transparent;
+//         border-radius: 5px;
+//         outline: none;
+//         background-color: transparent;
+//         &--default-outline
+//         {
+//             color: #5f5f5f;
+//             border: 1px solid #dcdcdc;
+//             &:hover
+//             {
+//                 color: #5f5f5f;
+//                 border-color: #bebebe;
+//             }
+//             &:active
+//             {
+//                 color: #000;
+//                 border-color: #000;
+//             }
+//             &:focus
+//             {
+//                 color: #000;
+//                 border-color: #000;
+//             }
+//         }
+//         &--primary
+//         {
+//             font-size: 14px;
+
+//             color: #fff;
+//             border: none;
+//             background-color: #e50329;
+//             background-image: linear-gradient(to top, #e31948 0%, #e75f49 100%);
+//             &:hover
+//             {
+//                 box-shadow: 0 1px 2px #a2a2a2;
+//             }
+//             &:active,
+//             &:focus
+//             {
+//                 background-image: linear-gradient(to top, #e75f49 0%, #e31948 100%);
+//             }
+//         }
+//         &--primary-outline
+//         {
+//             color: #e50329;
+//             border-color: #e50329;
+//             &:hover
+//             {
+//                 // ???
+//             }
+//             &:active,
+//             &:focus
+//             {
+//                 background-color: #fff2f4;
+//             }
+//         }
+//         &--icon
+//         {
+//             position: relative;
+
+//             min-width: 222px;
+//             .p-icon
+//             {
+//                 position: absolute;
+//                 top: 50%;
+//                 left: 8px;
+
+//                 max-width: 25px;
+//                 height: auto;
+//                 max-height: 25px;
+
+//                 transform: translateY(-50%);
+//             }
+//         }
+//         &--block
+//         {
+//             width: 100%;
+//             min-width: auto;
+//         }
+//         &--lg
+//         {
+//             min-width: 222px;;
+//         }
+//     }
+//     .btn--more
+//     {
+//         line-height: 1.2;
+
+//         position: relative;
+
+//         min-width: 222px;
+//         padding: 10px 20px;
+//         .p-icon--plus
+//         {
+//             font-size: 10px;
+
+//             top: 0;
+//             left: 0;
+
+//             opacity: 0;
+//         }
+//         .p-icon--more
+//         {
+//             font-size: 10px;
+
+//             top: 0;
+//             left: 50%;
+
+//             margin-left: -1px;
+//         }
+//         &:hover,
+//         &:active,
+//         &:focus
+//         {
+//             .p-icon--more
+//             {
+//                 opacity: 0;
+//             }
+//             .p-icon--plus
+//             {
+//                 opacity: 1;
+//             }
+//         }
+//     }
+//     .btn-icon-wrapper
+//     {
+//         position: absolute;
+//         top: 50%;
+//         left: 12px;
+
+//         width: 10px;
+//         height: 10px;
+//         margin-top: -5px;
+//         .p-icon
+//         {
+//             position: absolute;
+
+//             transition: all $baseAnimationDuration;
+//         }
+//     }
+//     .p-btn--back
+//     {
+//         padding: 8px 20px 9px;
+
+//         border-left: none;
+//         border-radius: 0 5px 5px 0;
+//         &:before
+//         {
+//             position: absolute;
+//             top: 3px;
+//             left: 0;
+
+//             width: 15px;
+//             height: 31px;
+
+//             content: '';
+//             transition: all $baseAnimationDuration;
+
+//             background: url(../i/icons/btn-ar-left-bg.svg) no-repeat top left;
+//             background-size: auto 100%;
+//         }
+//         &:hover
+//         {
+//             &:before
+//             {
+//                 background: url(../i/icons/btn-ar-left-bg--hover.svg) no-repeat top left;
+//             }
+//         }
+//         &:active,
+//         &:focus
+//         {
+//             &:before
+//             {
+//                 background: url(../i/icons/btn-ar-left-bg--active.svg) no-repeat top left;
+//             }
+//         }
+//     }
+// }
+
+
+
+/* Base */
+
+
+
+
+
+
+[role='button'],
+input[type='submit'],
+input[type='reset'],
+input[type='button'],
+button
+{
+            box-sizing: content-box;
+            cursor: pointer;
+    transition: all, $baseAnimationDuration;
+    outline: none;
+}
+
+/* Reset `button` and button-style `input` default styles */
+input[type='submit'],
+input[type='reset'],
+input[type='button'],
+button
+{
+    /* cursor: default; */
+    font: inherit;
+    line-height: normal;
+
+    overflow: visible;
+
+    padding: 0;
+
+    -webkit-user-select: none; /* for button */
+       -moz-user-select: none;
+        -ms-user-select: none;
+
+    color: inherit;
+    border: 0;
+    background: none;
+
+    -webkit-appearance: button; /* for input */
+}
+input::-moz-focus-inner,
+button::-moz-focus-inner
+{
+    padding: 0;
+
+    border: 0;
+}
+
+/* Make `a` like a button */
+[role='button']
+{
+    display: inline-block;
+
+    cursor: default;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+    text-align: center;
+    white-space: pre;
+    text-decoration: none;
+
+    color: inherit;
+}

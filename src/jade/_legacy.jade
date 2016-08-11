@@ -1,0 +1,375 @@
+include helpers/_global_mixins.jade
+include jade-components/_demo-data.jade
+html(class="js cssgradients opacity rgba supports displaytable display-table generatedcontent textshadow borderradius boxshadow boxsizing csstransforms3d desktop portrait" lang="ru")
+  head
+    include jade-components/_head.jade
+    meta(charset='utf-8')
+    link(rel='apple-touch-icon', href='resources/i/ulmart-logo-app90.png')
+    link(rel='android-touch-icon', href='resources/i/ulmart-logo-app90.png')
+    title Акции и спецпредложения - Юлмарт – интернет-магазин Юлмарт
+    meta(name='description', content='Бытовая техника, компьютеры, ТВ, электроника, автотовары, товары для дома и дачи, парфюмерия, детские товары, спорт.')
+    meta#viewport(name='viewport', content='width=device-width, user-scalable=1')
+    link(type='image/x-icon', rel='shortcut icon', href='//2b26s0p.fast.ulmart.ru/resources/desktop.blocks/favicon/favicon.ico')
+    link(rel='stylesheet', type='text/css', href='//2b26s0p.fast.ulmart.ru/resources/desktop.blocks/old/old.min.css?280')
+    link(rel='stylesheet', type='text/css', href='//2b26s0p.fast.ulmart.ru/resources/desktop.blocks/fonts/pfbeausanspro/pfbeausanspro.min.css?280')
+    link(rel='stylesheet', type='text/css', href='//2b26s0p.fast.ulmart.ru/resources/desktop.bundles/common/_common-blessed2.min.css?280', media='all')
+    link(rel='stylesheet', type='text/css', href='//2b26s0p.fast.ulmart.ru/resources/desktop.bundles/common/_common-blessed1.min.css?280', media='all')
+    link(rel='stylesheet', type='text/css', href='//2b26s0p.fast.ulmart.ru/resources/desktop.bundles/common/_common.min.css?280')
+    link(rel='stylesheet', type='text/css', href='//2b26s0p.fast.ulmart.ru/resources/desktop.blocks/temp1280/temp1280.min.css?280')
+    link(rel='stylesheet', type='text/css', href='//2b26s0p.fast.ulmart.ru/resources/desktop.bundles/news/_news.min.css?280')
+    link#spStyleCss(rel='stylesheet', href='https://ulmart.api.sociaplus.com/css/sp-style.css', type='text/css', media='screen')
+    script(type='text/javascript', async='', src='https://ulmart.api.sociaplus.com/partner.js')
+    script(async='', src='//cdn.rutarget.ru/static/tag/tag.js')
+    script(type='text/javascript', async='', src='https://top-fwz1.mail.ru/js/code.js')
+    script(type='text/javascript', async='', src='https://www.google-analytics.com/analytics.js')
+    script(type='text/javascript', async='', src='https://stats.g.doubleclick.net/dc.js')
+    script#scarab-js-api(src='https://recommender.scarabresearch.com/js/1E30E42CE072389F/scarab-v2.js')
+    script(async='', src='https://www.google-analytics.com/analytics.js')
+    script(async='', src='//www.googletagmanager.com/gtm.js?id=GTM-B5CM')
+    script(type='text/javascript', src='//2b26s0p.fast.ulmart.ru/resources/desktop.bundles/common/_common.min.js?280')
+    script(type='text/javascript').
+      /*replacing <i> for robots to <a> for users*/
+      $(document).ready(function() {
+      $("i.must_be_href[title]").each(function() {
+      $(this).removeClass("must_be_href").replaceWith("<a " + a_attr(this) + " >" + $(this).html() + "</a>");
+      function a_attr(self) {
+      var s = " ";
+      var attr = self.attributes;
+      for (var i = 0; i < attr.length; i++) {
+      if (attr[i].name == 'title') {
+      s += "href='" + attr[i].value + "' ";
+      } else if (attr[i].name == 'i-title') {
+      s += "title='" + attr[i].value + "' ";
+      } else {
+      s += attr[i].name + "='" + attr[i].value + "' ";
+      }
+      }
+      return s;
+      }
+      });
+      });
+    script(type='text/javascript', src='//2b26s0p.fast.ulmart.ru/resources/j/jquery.validate.min.js?280', defer='')
+    script(type='text/javascript', src='//2b26s0p.fast.ulmart.ru/resources/j/jquery.imagesloaded.min.js?280', defer='')
+    script(type='text/javascript', src='//2b26s0p.fast.ulmart.ru/resources/js/search/autocomplete.min.js?280', defer='')
+    script(type='text/javascript', src='//2b26s0p.fast.ulmart.ru/resources/js/common.min.js?280', defer='')
+    script(type='text/javascript', src='//2b26s0p.fast.ulmart.ru/resources/js/myPrice.min.js?280', defer='')
+    script(type='text/javascript', src='//2b26s0p.fast.ulmart.ru/resources/js/validate/checkForNumbers.min.js?280', defer='')
+    script(type='text/javascript', src='//2b26s0p.fast.ulmart.ru/resources/js/device.min.js?280')
+    script(type='text/javascript', src='//2b26s0p.fast.ulmart.ru/resources/js/gtm/helper.min.js?280', defer='')
+    script(type='text/javascript', src='//2b26s0p.fast.ulmart.ru/resources/js/gtm/md5.min.js?280', defer='')
+    script(type='text/javascript', src='//2b26s0p.fast.ulmart.ru/resources/js/feedback.min.js?280', defer='')
+    script(type='text/javascript', src='//2b26s0p.fast.ulmart.ru/resources/j/jquery.interface.min.js?280', defer='')
+    script(type='text/javascript', src='//2b26s0p.fast.ulmart.ru/resources/j/jquery.infinitescroll.min.js?280', defer='')
+    script(type='text/javascript', src='//2b26s0p.fast.ulmart.ru/resources/j/module-actions.min.js?280', defer='')
+    script(type='text/javascript', src='//2b26s0p.fast.ulmart.ru/resources/j/jquery.interface.actions.min.js?280', defer='')
+    script(type='text/javascript', src='//2b26s0p.fast.ulmart.ru/resources/js/actions.min.js?280', defer='')
+    script(type='text/javascript', src='//2b26s0p.fast.ulmart.ru/resources/j/jquery.interface.fly.min.js?280', defer='')
+    style.insider-custom-style(type='text/css').
+      body {
+      background: url("//image.sociaplus.com/ulmart/c193/77XB87ILP5.jpg") top center repeat-y!important;
+      }
+    script(type='text/javascript', src='//api.retailrocket.net/api/1.0/Event/pageView/5239b9210d422d33e499b521/jsonp?&callback=rrApi.pageViewCompleted&format=json&partnerUserId=&pvid=299578928388655&abtest=&session=5714cd756636b33164f507c3&referrer=http%3A%2F%2Fwww.ulmart.ru%2F&jsFileName=tracking.js&1467630134563', async='')
+
+  body(class="m-theme_normal  temp1280 m-theme_discount50" style="" cz-shortcut-listen="true")
+    div(class="b-page b-page_theme_normal")
+       div(class="b-page__wrapper")
+          header.b-page__header.
+                <nav class="navbar navbar_theme_normal navbar_color_default navbar_size_sm navbar-static-top">
+                    <div class="container-fluid">
+
+                        <ul class="nav nav_theme_normal navbar-nav navbar-nav_sites navbar-left" style="height: 48px; overflow:hidden;">
+                            <li class="retail active"><strong>Юлмарт<span class="hint">E-commerce  №1</span></strong>
+                            </li>
+                            <li class="corp"><a href="https://corp.ulmart.ru/special_offers/spb" rel="nofollow">Юлмарт Business<span class="hint">Товары для бизнеса</span></a>
+                            </li>
+                            <li class="discount"><a href="https://stock.ulmart.ru/" rel="nofollow" class="js-gtm-travel-event" data-gtm-event-category="Interactions" data-gtm-event-action="click" data-gtm-event-label="ulmartStockLink">Юлмарт Сливы<span class="hint">Стоковое пространство</span></a>
+                            </li>
+                            <li class="discount"><a href="https://discount.ulmart.ru/" rel="nofollow" class="js-gtm-travel-event" data-gtm-event-category="Interactions" data-gtm-event-action="click" data-gtm-event-label="ulmartDiscountLink">Юлмарт Discount<span class="hint">Уцененные товары</span></a>
+                            </li>
+                            <li class="cross-border"><a href="https://cb.ulmart.ru/special_offers/spb" rel="nofollow" class="js-gtm-travel-event">Юлмарт Маркетплейс<span class="hint">Товары из-за рубежа</span></a>
+                            </li>
+                            <li class="sindbad"><a href="https://sindbad.ulmart.ru/" rel="nofollow">Sindbad.Ulmart<span class="hint">Лучшие авиацены</span></a>
+                            </li>
+                            <li class="labels"><a href="https://thelabels.ulmart.ru/" rel="nofollow">TheLabels<span class="hint">Аутлет одежды</span></a>
+                            </li>
+                        </ul>
+
+
+
+                        <ul class="nav nav_theme_normal navbar-nav navbar-right">
+
+                            <li class="">
+                                <span class="b-pseudolink nounderline js-qtip-click-handle" data-qtip-href="/checkMyOrder" data-qtip-my="top center" data-qtip-at="bottom center" data-qtip-classes="qtip_pad2 qtip-width-4">Что с моим заказом?</span>
+                            </li>
+
+
+                            <li>
+                                <a href="/help/current" class="">Помощь</a>
+                            </li>
+                            <li><a class="js-gtm-travel-event" data-gtm-event-category="Interactions" data-gtm-event-action="click" data-gtm-event-label="register" href="/registration?target=/special_offers/spb">Регистрация</a>
+                            </li>
+                            <li><a class="js-gtm-travel-event" data-gtm-event-category="Interactions" data-gtm-event-action="click" data-gtm-event-label="logIn" href="/login?target=/special_offers/spb"><i class="b-ico b-ico_sm b-ico_sign-in active"></i><span>Вход</span></a>
+                            </li>
+
+                        </ul>
+                        <ul class="nav nav_theme_normal navbar-nav navbar-nav_sites navbar-left calc-clone" style="position: absolute; top: -10000px; left: 0px;">
+                            <li class="retail active"><strong>Юлмарт<span class="hint">E-commerce  №1</span></strong>
+                            </li>
+                            <li class="corp"><a href="https://corp.ulmart.ru/special_offers/spb" rel="nofollow">Юлмарт Business<span class="hint">Товары для бизнеса</span></a>
+                            </li>
+                            <li class="discount"><a href="https://stock.ulmart.ru/" rel="nofollow" class="js-gtm-travel-event" data-gtm-event-category="Interactions" data-gtm-event-action="click" data-gtm-event-label="ulmartStockLink">Юлмарт Сливы<span class="hint">Стоковое пространство</span></a>
+                            </li>
+                            <li class="discount"><a href="https://discount.ulmart.ru/" rel="nofollow" class="js-gtm-travel-event" data-gtm-event-category="Interactions" data-gtm-event-action="click" data-gtm-event-label="ulmartDiscountLink">Юлмарт Discount<span class="hint">Уцененные товары</span></a>
+                            </li>
+                            <li class="cross-border"><a href="https://cb.ulmart.ru/special_offers/spb" rel="nofollow" class="js-gtm-travel-event">Юлмарт Маркетплейс<span class="hint">Товары из-за рубежа</span></a>
+                            </li>
+                            <li class="sindbad"><a href="https://sindbad.ulmart.ru/" rel="nofollow">Sindbad.Ulmart<span class="hint">Лучшие авиацены</span></a>
+                            </li>
+                            <li class="labels"><a href="https://thelabels.ulmart.ru/" rel="nofollow">TheLabels<span class="hint">Аутлет одежды</span></a>
+                            </li>
+                            <li class="dropdown dropdown_theme_normal">
+                                <span aria-expanded="false" class="b-pseudolink nounderline dropdown-toggle text-strong" data-toggle="dropdown">
+                                  Еще проекты
+                                  <i class="caret"></i>
+                              </span>
+                                <ul class="dropdown-menu pull-left">
+
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+
+                <nav class="navbar-static-top navbar_color_white navbar_theme_normal navbar_headermain-responsive">
+                    <div class="container-fluid cleared">
+                        <div class="row row_fix-left">
+                            <div class="col-main-left">
+                                <div itemscope="" itemtype="http://schema.org/Organization" class="b-head-logo navbar-logo ">
+                                    <a itemprop="url" href="https://www.ulmart.ru/">Главная</a>
+                                    <img src="//2b26s0p.fast.ulmart.ru/resources/desktop.blocks/b-head-logo/ulmart-logo.png" alt="Юлмарт. Кибермаркет электроники" itemprop="logo" width="215" height="25"> <span style="display:none;" itemprop="name">ООО «Юлмарт РСК»</span>
+                                    <span style="display:none;" itemprop="description">Продажа компьютеров, бытовой техники, комплектующих. Огромный выбор товаров по доступным ценам.</span>
+                                    <span style="display:none;" itemprop="address">195197, г. Санкт-Петербург, ул. Благодатная, д. 50</span>
+                                    <span style="display:none;" itemprop="telephone">+78123363777</span>
+                                </div>
+                            </div>
+                            <div class="col-main-sectionwrap">
+                                <div class="col-main-section">
+                                    <p class="navbar-text">
+                                        <span class="b-pseudolink navbar-link nounderline" id="load-cities" data-target="#cities-modal" data-href="/header/cities.json">
+                                          Санкт-Петербург
+                                      </span>
+                                    </p>
+                                    <p class="navbar-text navbar-phone">
+                                        <small class="code">+7 812</small>&nbsp;<span class="number">336-3777</span>
+                                        <small class="text-muted">Круглосуточно</small>
+                                    </p>
+                                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-1">
+                                        <span class="icon-bar"></span>
+                                        <span class="icon-bar"></span>
+                                        <span class="icon-bar"></span>
+                                    </button>
+
+                                    <div class="collapse navbar-collapse" id="navbar-collapse-1">
+                                        <ul class="nav nav_theme_normal navbar-right navbar-nav">
+                                            <li><a href="/help/current/contacts" class="text-base nounderline" rel="nofollow"><span class="underline">Адреса и контакты</span></a>
+                                            </li>
+                                            <li><a href="/help/current/how_to_order" class="text-base nounderline" rel="nofollow"><span class="underline">Заказ</span></a>
+                                            </li>
+                                            <li><a href="/help/current/how_to_pay" class="text-base nounderline" rel="nofollow"><span class="underline">Оплата</span></a>
+                                            </li>
+                                            <li><a href="/help/current/how_to_receive" class="text-base nounderline" rel="nofollow"><span class="underline">Получение</span></a>
+                                            </li>
+                                            <li><a href="/help/current/how_to_return" class="text-base nounderline" rel="nofollow"><span class="underline">Гарантия и возврат</span></a>
+                                            </li>
+                                            <!--noindex-->
+                                            <!--/noindex-->
+                                        </ul>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+          div.b-page__body
+            .container-fluid
+              //- INJECT STYLES
+              .p-offer.p-offer--accent.p-theme
+                .p-container
+                  div.p-offer__header
+                    .p-row
+                      .p-col.p-col-8
+                         h1.p-h1 Акции и специальные предложения
+                      .p-col.p-col-4.text-right
+                         a(href="./archive.html").p-btn.p-btn--default-outline Архив акций
+                  .p-offer__body
+                    aside.p-offer__sidebar
+                      include jade-components/_filters.jade
+                    main.p-offer__content
+                      // Single Banner image
+                      // .p-banner-wrapper
+                      //   img(src="https://unsplash.it/970/250" width="970" height="250" alt="")
+                      // ./ Single Banner image
+                      include jade-components/_slider.jade
+                      .p-offer-list-wrapper
+                        - var n = 0
+                         .js-p-row.p-row
+                          while n < 24
+                            .p-col.p-col-4.p-col-sm-6
+                              +offer()
+                              - n++
+                      .p-row
+                         .p-col.p-col-4.p-col-offset-4.p-offer-list-wrapper__btn
+                           a#show-more.p-btn.p-btn--primary-outline.p-btn--block.btn--more(href="#" rel="nofollow")
+                              .btn-icon-wrapper
+                                +icon('more')
+                                +icon('plus')
+                              span.p-btn__title Посмотреть еще
+              template#template-offer
+                .p-col.p-col-4.p-col-sm-6
+                  a(href="#{'./inner-' + getRandomArbitrary(1,4) + '.html'}" class='p-offer-item')
+                    .p-offer-item__thumb
+                      img.img-responsive(src="https://fakeimg.pl/313x175" alt="img alt")
+                    .p-offer-item__title Дарим до 30 000 XXL-бонусов за покупку телевизоров Samsung!  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum eos, magni facere. Saepe ad ipsum, in illum quidem! Ipsam voluptatum unde, at reiciendis odit nulla quis id. Quos porro, culpa!
+
+       footer.b-page__footer.
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-main-7">
+                        <ul class="b-list b-list_inline cleared">
+                            <li class="b-list__item"><a href="/help/current/contacts" class="underline text-base" rel="nofollow">Адреса и телефоны</a>
+                            </li>
+                            <li class="b-list__item"><a href="/about/current/ulmart" class="underline text-base" rel="nofollow">О Юлмарте</a>
+                            </li>
+                            <li class="b-list__item"><a href="/help/current" class="underline text-base" rel="nofollow">Помощь</a>
+                            </li>
+                            <li class="b-list__item"><a href="/about/current/ads" class="underline text-muted text-sm" rel="nofollow">Рекламодателям</a>
+                            </li>
+                            <li class="b-list__item"><a href="/about/current/press" class="underline text-muted text-sm" rel="nofollow">Пресс-центр</a>
+                            </li>
+                            <li class="b-list__item"><a href="http://ulmart-dev.ru" class="underline text-muted text-sm" rel="nofollow">Юлмарт Девелопмент</a>
+                            </li>
+                            <li class="b-list__item"><a href="http://investors.ulmart.ru/" class="underline text-muted text-sm" rel="nofollow">For investors</a>
+                            </li>
+                            <!--/noindex-->
+                        </ul>
+                        <ul class="b-inline-block-list b-page__footer-inline-block-list">
+                            <li class="b-inline-block">
+                                <a href="https://market.yandex.ru/shop/18433/reviews?from=18433" target="_blank">
+                                    <img src="//2b26s0p.fast.ulmart.ru/resources/img/ya.market-5.png" alt="" class="" width="310" height="29"> </a>
+                            </li>
+                            <li class="b-inline-block">
+                                <span class="text-muted">Участник</span>
+                                <a href="http://www.akit.ru/" target="_blank"><img src="//2b26s0p.fast.ulmart.ru/resources/img/akit-logo.png" alt="" width="35" height="37">
+                                </a>
+                            </li>
+                            <li class="b-inline-block">
+                                <span class="b-ico-round b-ico-round_lg b-ico-round_18plus">18+</span>
+                            </li>
+                        </ul>
+                        <div class="cleared">
+                            <div class="text-muted text-sm">
+                                Цены в центрах исполнения и выдачи заказов Юлмарт могут отличаться от цен, указанных на сайте. Разработка — <a href="http://www.dz.ru/" class="underline text-muted" target="_blank">Digital Zone</a>, поставщик ERP — <a href="http://www.ultimaerp.com/" class="underline text-muted" target="_blank">Ultima</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-main-5 text-right">
+                        <div class="b-ico-group b-ico-group_lg b-page__footer-social">
+                            <a href="https://vkontakte.ru/i_love_ulmart" target="_blank" title="Vkontakte" class="b-ico-round b-ico-round_theme_normal b-ico-round_lg">
+                                <i class="b-ico b-ico_vk b-ico_sm"></i>
+                            </a>
+                            <a href="https://www.facebook.com/I.love.Ulmart" target="_blank" title="Facebook" class="b-ico-round b-ico-round_theme_normal b-ico-round_lg">
+                                <i class="b-ico b-ico_fb b-ico_sm"></i>
+                            </a>
+                            <a href="https://www.odnoklassniki.ru/iloveulmart" target="_blank" title="Odnoklassniki" class="b-ico-round b-ico-round_theme_normal b-ico-round_lg">
+                                <i class="b-ico b-ico_ok b-ico_sm"></i>
+                            </a>
+                            <a href="https://my.mail.ru/community/ulmart_ru/" target="_blank" title="Мой Мир" class="b-ico-round b-ico-round_theme_normal b-ico-round_lg">
+                                <i class="b-ico b-ico_mm b-ico_sm"></i>
+                            </a>
+                            <a href="https://www.twitter.com/Ulmart_ru" target="_blank" title="Twitter" class="b-ico-round b-ico-round_theme_normal b-ico-round_lg">
+                                <i class="b-ico b-ico_tw b-ico_sm"></i>
+                            </a>
+                            <a href="https://plus.google.com/b/102298704406930774476/102298704406930774476/" target="_blank" title="Google+" class="b-ico-round b-ico-round_theme_normal b-ico-round_lg">
+                                <i class="b-ico b-ico_gplus b-ico_sm"></i>
+                            </a>
+                            <a href="https://instagram.com/iloveulmart" target="_blank" title="Instagram" class="b-ico-round b-ico-round_theme_normal b-ico-round_lg">
+                                <i class="b-ico b-ico_inst b-ico_sm"></i>
+                            </a>
+                            <a href="https://www.youtube.com/user/ulmartofficial" target="_blank" title="Youtube" class="b-ico-round b-ico-round_theme_normal b-ico-round_lg">
+                                <i class="b-ico b-ico_sm b-ico_youtube"></i>
+                            </a>
+                            <a href="https://ru.foursquare.com/ulmart_ru" target="_blank" title="Foursquare" class="b-ico-round b-ico-round_theme_normal b-ico-round_lg">
+                                <i class="b-ico b-ico_fs_20x20"></i>
+                            </a>
+                        </div>
+                        <div class="b-page__footer-apps">
+                            <a href="https://itunes.apple.com/ru/app/ulmart/id867679958" target="_blank">
+                                <img src="/resources/uploads/appstore-sm.png" alt="" width="90" height="32">
+                            </a>
+                            <a href="https://play.google.com/store/apps/details?id=ru.ulmart.mobapp&amp;referrer=utm_source%3Dulmart%26utm_medium%3Dicon" target="_blank">
+                                <img src="/resources/uploads/gplay-sm.png" alt="" width="90" height="32">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="h-space-bottom-panel"></div>
+
+            <nav class="b-bottom-panel navbar_size_bottom-panel b-bottom-panel_theme_normal navbar navbar_theme_normal navbar-color navbar_color_inverse navbar-fixed-bottom" id="cartPanel">
+                <div class="container-fluid">
+                    <button class="btn btn_theme_normal btn-gray navbar-btn" data-href="ajax/feedback2.html" onclick="feedbackForm(event);">
+                        <i class="fa fa-sm fa-envelope-o text-primary"></i> Обратная связь
+                    </button>
+
+                    <ul class="nav nav_theme_normal navbar-nav navbar-right" id="bottomCartPanelList">
+
+                        <li id="bottomComparator" class="empty b-bottom-panel__compare">
+                            <a href="/comparator" class="nounderline" id="compar_link">
+                                <span class="b-ico b-ico_compare2 b-ico_theme_normal b-ico_sm"></span>
+                                <span class="b-tooltip b-tooltip_bp js-tooltip-compare" id="bottom-compare">
+                  <span class="g-underline">Сравнение</span>
+                                <span class="b-tooltip__wrap" style="display: none; visibility: visible; margin-bottom: 70px;">
+                      Добавлено к сравнению
+                  </span>
+                                </span>
+                                <span class="badge badge_theme_normal badge-md">0</span>
+                            </a>
+                        </li>
+
+                        <li id="bottomFavorites" class="empty b-bottom-panel__bookmarks">
+                            <a href="/favorites" class="nounderline" id="fav_link">
+                                <span class="b-ico b-ico_bookmarks2 b-ico_theme_normal b-ico_sm"></span>
+                                <span class="b-tooltip b-tooltip_bp js-tooltip-put">
+                  <span class="g-underline">Закладки</span>
+                                <span class="b-tooltip__wrap" id="bottom-put" style="display: none; visibility: visible; margin-bottom: 70px;">Добавлено в закладки</span>
+                                </span>
+                                <span class="badge badge_theme_normal badge-md">0</span>
+                            </a>
+                        </li>
+
+                        <li id="bottomCart" class="empty b-bottom-panel__buy">
+                            <a class="nounderline pull-left" id="bottom-cart" href="/cart">
+                                <i class="b-ico b-ico_basket2 b-ico_theme_normal b-ico_sm"></i>
+                                <span class="b-tooltip b-tooltip_bp js-tooltip-buy">
+                      <span class="underline">Корзина</span>
+                                <span class="b-tooltip__wrap" style="display: none; visibility: visible; margin-bottom: 70px;">
+                          Добавлено в корзину
+                      </span>
+                                </span>
+                                <span class="badge badge_theme_normal badge-md">0</span>
+                                <span class="b-price b-price_theme_normal">
+                      <span class="b-price__num">Пока пусто</span>
+                                </span>
+                            </a>
+
+                            <a id="bottomButton" data-gtm-eventlocation="footer" class="btn btn_theme_normal btn-primary navbar-right navbar-btn navbar-right _w140 btn-inside-nav disabled" href="#" rel="nofollow">Оформить заказ</a>
+                        </li>
+                    </ul>
+
+                </div>
+            </nav>
+            <a class="btn-back-top disabled" href="#up" id="up-handle" title="Наверх"></a>
+       script(src="js/main.js")
+       script(src="js/helpers.js")
+

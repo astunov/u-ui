@@ -1,0 +1,25 @@
+{
+  "name": "offers",
+  "description": "",
+  "main": "index.html",
+  "authors": [
+    "astunov <astunov@gmail.com>"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "svg4everybody": "^2.1.0",
+    "bxslider-4": "^4.2.5"
+  },
+  "dependencies": {
+    "normalize-scss": "normalize.scss#^5.0.3"
+  }
+}

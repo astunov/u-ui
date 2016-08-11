@@ -1,0 +1,46 @@
+/*********************************
+** DISCOUNT WIDGET
+*********************************/
+
+.c-cat-widget
+{
+  background-color: #fff;
+  padding: 20px;
+    &__title
+    {
+      margin-top: 0;
+      margin-bottom: 20px;
+      line-height: 24px;
+        svg
+        {
+            display: inline-block;
+
+            padding-right: 10px;
+
+            vertical-align: -4px;
+        }
+    }
+    &__list {
+      margin: 0;
+      padding: 0;
+    }
+    &__item {
+      padding: 0;
+      display: block;
+      font-size: $font-size-el-clasico;
+    }
+    &__link {
+
+    }
+    &__desc {
+      font-size: $font-size-el-clasico;
+      color: $gray-ligther;
+    }
+
+    // COMBO
+    &__list + &__desc {
+      margin-top: 15px;
+    }
+
+}
+

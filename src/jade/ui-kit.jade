@@ -1,0 +1,36 @@
+extends ./_layout.jade
+block vars
+	- var array = {body_class:'t-dev', layout_mod:'', title:'UI KIT | Goods', 'footer': false}
+block content
+
+		.container
+			h1 UI Kit
+
+			h2 Цвета
+			.fl-row
+				.u-box.u-box--primary
+				.u-box.u-box--gray-base
+				.u-box.u-box--gray-darker
+				.u-box.u-box--gray-ligther
+				.u-box.u-box--secondary
+				.u-box.u-box--success
+
+			h2 Заголовки
+			h1.h1 H1 Заголовок 32pt
+			h2.h2 H2 Заголовок 22pt
+			h3.h3 H3 Заголовок 18pt
+
+			h2 Инпуты
+			.fl-row
+				+checkbox('Выбрано', {"checked": true})
+				+checkbox('Пассив')
+				+checkbox('Выбрано блок', {"disabled": true, "checked": true})
+				+checkbox('Пассив блок', {"disabled": true})
+			.fl-row
+				+radio('Выбрано', {"name":"123", "checked": true})
+				+radio('Пассив', {"name":"123"})
+				+radio('Выбрано блок', {"name":"31", "disabled": true, "checked": true})
+				+radio('Пассив блок', {"name":"123", "disabled": true})
+
+
+

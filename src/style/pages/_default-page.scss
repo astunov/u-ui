@@ -1,0 +1,67 @@
+/*********************************
+** LAYOUT
+*********************************/
+
+.l-page
+{
+    &__title-wrapper
+    {
+        margin-bottom: 20px;
+    }
+    &__title
+    {
+        line-height: 1;
+
+        margin: 0;
+    }
+    &__wrapper
+    {
+        overflow: hidden;
+
+        margin-bottom: 25px;
+    }
+    // COMBOS
+}
+
+
+.l-sidebar
+{
+    float: left;
+
+    width: 265px;
+    margin-right: 15px;
+    &__item
+    {
+        overflow: hidden;
+
+        margin-bottom: 15px;
+        img
+        {
+            max-width: 100%;
+        }
+    }
+}
+
+.l-main
+{
+    font-size: 16px;
+
+    float: none;
+    overflow: hidden;
+
+    box-sizing: border-box;
+    width: auto;
+    // COMBOS
+    .c-card
+    {
+        margin-bottom: 25px;
+    }
+    .c-bar-result
+    {
+        margin-bottom: 15px;
+    }
+    .c-card:last-of-type
+    {
+        margin-bottom: 0;
+    }
+}

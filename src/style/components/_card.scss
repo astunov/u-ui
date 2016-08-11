@@ -1,0 +1,125 @@
+/*********************************
+** GRID
+**
+** STRUCTURE
+** WIDGET WRAPPER FOR GOODS\CATEGORIES
+**
+*********************************/
+
+$c-card-padding: 20px;
+
+.c-card
+{
+    position: relative;
+
+    margin-bottom: 35px;
+    padding: $c-card-padding;
+
+    background-color: #fff;
+
+
+    // LAYOUT
+    &__header
+    {
+        position: relative;
+        // visual border line
+        &:after
+        {
+            position: absolute;
+            top: 50%;
+
+            left: 20px;
+            right: 20px;
+            height: 1px;
+            // to compensate height
+            // & combine with more link icon
+            margin-top: 1px;
+
+            content: '';
+
+            background-color: $gray-light;
+        }
+    }
+    // no flex in a city
+    // vertical align in row
+    // for my granny
+    &__header-inner
+    {
+        position: relative;
+        // hide visual border line
+        z-index: 2;
+
+        display: table;
+    }
+    &__header-td
+    {
+        display: table-cell;
+
+        padding-right: 20px;
+
+        vertical-align: middle;
+
+        background-color: #fff;
+    }
+    &__header + &__body {
+        margin-top: 10px;
+    }
+    // goods wrapper
+    // imitates & custom margin .row
+    &__row {
+        // get 100% width for goods
+        margin-left: -$c-card-padding;
+        margin-right: -$c-card-padding;
+
+        @include clearfix();
+
+
+        // display: flex;
+
+        // align-items: stretch;
+
+        // display: table;
+        // width: 100%;
+        // margin: 0;
+
+        // [class*='col-'] {
+        //     display: table-cell;
+        //     float: none;
+        // }
+
+        &:last-of-type {
+          .c-category-item {
+            margin-bottom: 5px;
+          }
+        }
+    }
+
+    // ELEMENTS
+    &__title
+    {
+        margin: 0;
+    }
+
+    &__controls {
+      font-size: 14px;
+
+      position: absolute;
+      top: 50%;
+      right: 0;
+
+      padding-left: 20px;
+
+
+      transform: translateY(-50%);
+
+      background-color: #fff;
+      // hide visual border line
+      z-index: 2;
+    }
+
+    // COMBO
+    &__row + &__row {
+        //temp ?
+        margin-top: 30px;
+    }
+}

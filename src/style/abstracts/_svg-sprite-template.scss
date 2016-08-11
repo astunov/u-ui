@@ -1,0 +1,12 @@
+/*********************************
+** SPRITE GENERATES
+** FROM TEMPLATE AUTOMATICALLY
+** DON'T CHANGE _SVG-SPRITE.SCSS
+*********************************/
+
+{{#shapes}}
+.icon--{{base}} {
+  font-size:({{height.inner}}/10)*1rem;
+  width:({{width.inner}}/{{height.inner}})*1em;
+}
+{{/shapes}}

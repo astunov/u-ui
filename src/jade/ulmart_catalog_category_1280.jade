@@ -1,0 +1,52 @@
+extends ./_layout.jade
+block vars
+	- var array = {body_class:'t-dev', layout_mod:'', title:'UI KIT | Goods'}
+block content
+	+banner
+	+breadcrumbs([{"title": "Дом и ремонт"}])
+	+pageTitle('Инструменты')
+
+	.l-page__wrapper
+		+sidebar
+			.l-sidebar__item
+					.c-filters
+						+categoryMenu(offerCategories1)
+						+categoryMenu(offerCategories2)
+						+categoryMenu(offerCategories3)
+			.l-sidebar__item
+				+catWidget
+		+main
+			//- +
+			+card()
+				+cardHeader({"title": "Электроинструмент и бензоинструмент", "linkTitle": "Посмотреть все"})
+				+cardBody()
+					+cardGoods()
+						+loop_while(2)
+							+goods({"classList": ['col-6', 'c-goods--wide'], "desc": true})
+					+cardGoods()
+						+loop_while(5)
+							+goods({"classList": ['col-1_5']})
+			//- ./
+			//- +
+			+card()
+				+cardHeader({"title": "Силовая техника", "linkTitle": "Посмотреть все"})
+				+cardBody()
+					+cardGoods()
+						+loop_while(2)
+							+goods({"classList": ['col-6', 'c-goods--wide'], "desc": true})
+					+cardGoods()
+						+loop_while(5)
+							+goods({"classList": ['col-1_5']})
+			//- ./
+			//- +
+			+card()
+				+cardHeader({"title": "Ручной инструмент, лестницы", "linkTitle": "Посмотреть все"})
+				+cardBody()
+					+cardGoods()
+						+loop_while(2)
+							+goods({"classList": ['col-6', 'c-goods--wide'], "desc": true})
+					+cardGoods()
+						+loop_while(5)
+							+goods({"classList": ['col-1_5']})
+			//- ./
+	+banner
