@@ -48,17 +48,3 @@ Exception: grid. Row\cols are without any prefixes.
 - [] .c-stripes
 
 # ISSUES
-- [x] SCSS trouble with import
-
-
-
-
-
-
-
-
-
-
-
-
-

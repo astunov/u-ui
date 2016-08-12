@@ -16,3 +16,12 @@
         clear: both;
     }
 }
+
+
+@mixin img-res
+{
+    display: block;
+
+    max-width: 100%;
+    height: auto;
+}

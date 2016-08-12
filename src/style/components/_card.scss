@@ -16,8 +16,6 @@ $c-card-padding: 20px;
     padding: $c-card-padding;
 
     background-color: #fff;
-
-
     // LAYOUT
     &__header
     {
@@ -27,9 +25,9 @@ $c-card-padding: 20px;
         {
             position: absolute;
             top: 50%;
-
-            left: 20px;
             right: 20px;
+            left: 20px;
+
             height: 1px;
             // to compensate height
             // & combine with more link icon
@@ -61,65 +59,97 @@ $c-card-padding: 20px;
 
         background-color: #fff;
     }
-    &__header + &__body {
+    &__header + &__body
+    {
         margin-top: 10px;
     }
     // goods wrapper
     // imitates & custom margin .row
-    &__row {
+    &__body
+    {
+        position: relative;
+
+        margin-top: -20px;
+        margin-bottom: -20px;
+        &:before
+        {
+            position: absolute;
+            z-index: 1;
+            top: 0;
+            right: 0;
+            left: 0;
+
+            content: '';
+
+            border-top: 1px solid #fff;
+        }
+        // **HACK**
+        // for wide goods border-top &
+        // instead .c-card overflow
+        &:after
+        {
+            position: absolute;
+            z-index: 1;
+            right: -$c-card-padding;
+            bottom: -1px;
+            left: -$c-card-padding;
+
+            content: '';
+            // body color
+
+            border-bottom: 1px solid #f3f7f9;
+        }
+    }
+    &__row
+    {
+        position: relative;
+
+        margin-right: -$c-card-padding;
         // get 100% width for goods
         margin-left: -$c-card-padding;
-        margin-right: -$c-card-padding;
 
         @include clearfix();
-
-
         // display: flex;
-
         // align-items: stretch;
-
         // display: table;
         // width: 100%;
         // margin: 0;
-
         // [class*='col-'] {
         //     display: table-cell;
         //     float: none;
         // }
-
-        &:last-of-type {
-          .c-category-item {
-            margin-bottom: 5px;
-          }
+        &:last-of-type
+        {
+            .c-category-item
+            {
+                margin-bottom: 5px;
+            }
         }
     }
-
     // ELEMENTS
     &__title
     {
         margin: 0;
     }
+    &__controls
+    {
+        font-size: 14px;
 
-    &__controls {
-      font-size: 14px;
+        position: absolute;
+        // hide visual border line
+        z-index: 2;
+        top: 50%;
+        right: 0;
 
-      position: absolute;
-      top: 50%;
-      right: 0;
+        padding-left: 20px;
 
-      padding-left: 20px;
+        transform: translateY(-50%);
 
-
-      transform: translateY(-50%);
-
-      background-color: #fff;
-      // hide visual border line
-      z-index: 2;
+        background-color: #fff;
     }
-
     // COMBO
-    &__row + &__row {
-        //temp ?
-        margin-top: 30px;
-    }
+    // &__row + &__row {
+    //     //temp ?
+    //     margin-top: 30px;
+    // }
 }
