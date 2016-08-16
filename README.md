@@ -48,3 +48,5 @@ Exception: grid. Row\cols are without any prefixes.
 - [] .c-stripes
 
 # ISSUES
+
+border cat

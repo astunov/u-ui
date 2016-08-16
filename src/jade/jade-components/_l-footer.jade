@@ -1,25 +1,35 @@
 //- +
 +card()
-  +cardHeader({"title": "Рекомендовано для вас, Валентина", "controls": true})
-  +cardBody()
-    +cardGoods()
-      +loop_while(6)
-        +goods({"classList": ['col-2']})
+	+cardHeader({"title": "Рекомендовано для вас, Валентина", "controls": true})
+	+cardBody()
+		+cardGoods()
+			+loop_while(6)
+				+goods({"classList": ['col-2']})
 //- ./
 //- +
 +card()
-  +cardHeader({"title": "Последние просмотренные", "linkTitle": "Посмотреть и отредактировать историю", "controls": true })
-  +cardBody()
-    +cardGoods()
-      +loop_while(8)
-        +goods({"classList": ['col-1_8'], "thumbOnly": true})
+	+cardHeader({"title": "Последние просмотренные", "linkTitle": "Посмотреть и отредактировать историю", "controls": true })
+	+cardBody()
+		+cardGoods()
+			+loop_while(8)
+				+goods({"classList": ['col-1_8'], "thumbOnly": true})
 //- ./
 //- +
 +card()
-  +cardHeader({"title": "Последние просмотренные на анаболиках ", "linkTitle": "Посмотреть и отредактировать историю", "controls": true })
-  +cardBody()
-    +cardGoods()
-      +loop_while(8)
-        +goods({"classList": ['col-1_8'], "thumbOnly": true})
+	+cardHeader({"title": "Последние просмотренные на анаболиках ", "linkTitle": "Посмотреть и отредактировать историю", "controls": true })
+	+cardBody()
+		+cardGoods()
+			+loop_while(8)
+				a.col.col-1_8.c-goods(href="" title="")
+						.c-goods__thumb.c-goods__thumb--tiny
+							img(src="https://p.fast.ulmart.ru/p/mid/361/36141/3614161.jpg" alt="")
+						.c-goods__body
+							.c-goods__title Ноутбук ASUS X553SA, 90NB0AC1-M02840
+							.c-goods__meta
+								.c-goods__meta-item
+									.c-goods__price
+										strong 18 990
+										|&nbsp;руб.
+								.c-goods__meta-item ик Добавить в корзину
 //- ./
 include ./_discBar.jade
