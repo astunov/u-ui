@@ -13,6 +13,8 @@ var plumber = require('gulp-plumber');
 var autoprefixer = require('gulp-autoprefixer');
 var rigger = require('gulp-rigger');
 var wait = require('gulp-wait');
+var cssfont64 = require('gulp-cssfont64');
+
 // svg sprite
 var svgSprite = require('gulp-svg-sprite');
 var svgmin = require('gulp-svgmin');
@@ -91,12 +93,28 @@ gulp.task('img:sync', function() {
     .pipe(browserSync.stream());
 });
 
-gulp.task('fonts:sync', function() {
-  return gulp.src('')
-    .pipe(plumber())
-    .pipe(dirSync(
-      inputDir + 'fonts/', outputDir + 'fonts/', {printSummary: true}
-    ))
+// gulp.task('fonts:sync', function() {
+//   return gulp.src('')
+//     .pipe(plumber())
+//     .pipe(dirSync(
+//       inputDir + 'fonts/', outputDir + 'fonts/', {printSummary: true}
+//     ))
+//     .pipe(browserSync.stream());
+// });
+
+/**
+ * Конвертация шрифтов в base64
+ * для загрузки в localStorage
+ * временный метод, используется в ручном режиме,
+ * тк данный плагин не группирует семейство шрифтов
+ * дальше ручками перебивается в один файл ¯\_(ツ)_/¯
+ * Альернатива: fontsquirrel при конвертации
+ * в base64 потрит шрифт
+ */
+gulp.task('fonts:convert', function() {
+  return gulp.src([inputDir + 'fonts/*.{woff,woff2}'])
+    .pipe(cssfont64())
+    .pipe(gulp.dest(inputDir + 'style/'))
     .pipe(browserSync.stream());
 });
 
@@ -143,7 +161,7 @@ gulp.task('svgSpriteBuild', function() {
     .pipe(gulp.dest(inputDir + 'i/sprite/'));
 });
 
-// watching files and run tasks
+// watching files and utils
 gulp.task('watch', function() {
   gulp.watch(inputDir + 'jade/**/*.jade', ['jade']);
   gulp.watch(inputDir + 'style/**/*.scss', ['style']);
@@ -153,6 +171,10 @@ gulp.task('watch', function() {
 
 gulp.task('webserver', function() {
   browserSync(config);
+});
+
+gulp.task('clean', function(cb) {
+  rimraf('./build/', cb);
 });
 
 /*
@@ -181,26 +203,26 @@ gulp.task('img:prod', function() {
     .pipe(gulp.dest(outputDir + 'i/'));
 });
 
+
+
 gulp.task('build', [
   'jade',
   'style',
   'js:sync',
   'img:sync',
-  'fonts:sync',
+  // 'fonts:sync',
   'svgSpriteBuild'
 ]);
 
 gulp.task('prod', [
+  'clean',
+  'jade',
   'style:prod',
   'img:prod',
   'svgSpriteBuild'
 ]);
 
 // TODO: prod
-
-// gulp.task('clean', function (cb) {
-//    rimraf('./build/*.html', cb);
-// });
 
 // // Test building files
 // gulp.task('cssLint', function () {
