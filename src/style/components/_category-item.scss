@@ -1,72 +1,106 @@
 /*********************************
 ** CATEGORY ITEM
-**
-** Structure
-**
+** NOTICE:
+** All commented code is under
+** quarantine. Probably there are
+** some good ideas to improve,
+** but not now
 *********************************/
 
-.c-category-item
+.cat-item
 {
     position: relative;
-
     // sry for that
-    height: 255px;
-    margin-top: 5px;
-    margin-bottom: 15px;
+
+    // height: 255px;
+    // margin-top: 5px;
+    // margin-bottom: 15px;
     padding-right: 20px;
     padding-left: 20px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    border-top: 1px solid $gray-light;
 
-    // cursor: pointer;
-    &:not(:first-of-type)
-    {
-        border-left: 1px solid $gray-light;
-    }
-    // border-bottom
-    &:before {
+    transition: box-shadow $baseAnimationDuration;
+
+
+    &:not(:first-of-type):before {
       content: '';
       position: absolute;
-      bottom: -25px;
       left: 0;
-      right: 0;
-      border-bottom: 1px solid $gray-light;
+      top: 25px;
+      bottom: 25px;
+      border-left: 1px solid $gray-light;
     }
+    // cursor: pointer;
+    // &:not(:first-of-type)
+    // {
+    //     border-left: 1px solid $gray-light;
+    // }
+    // border-bottom
+    // &:before
+    // {
+    //     position: absolute;
+    //     right: 0;
+    //     bottom: -25px;
+    //     left: 0;
+    //     content: '';
+    //     border-bottom: 1px solid $gray-light;
+    // }
     // get best fps perfomance
-    &:after
-    {
-        position: absolute;
-        z-index: 2;
-        top: -25px;
-        right: 0;
-        bottom: -25px;
-        left: 0;
+    // &:after
+    // {
+    //     position: absolute;
+    //     z-index: 2;
+    //     // top: -25px;
+    //     top: 0;
+    //     right: 0;
+    //     bottom: 0;
+    //     // bottom: -25px;
+    //     left: 0;
 
-        content: '';
-        transition: opacity $baseAnimationDuration;
+    //     content: '';
+    //     transition: opacity $baseAnimationDuration;
 
-        opacity: 0;
-        box-shadow: 0 5px 15px #b8c0c4;
-    }
+    //     opacity: 0;
+    //     box-shadow: 0 5px 15px #b8c0c4;
+    // }
+    // &:hover,
+    // &:focus,
+    // &:active
+    // {
+    //     border-color: transparent;
+    //     & + .c-goods
+    //     {
+    //         border-color: transparent;
+    //     }
+    //     &:after
+    //     {
+    //         opacity: 1;
+    //     }
+    //     &:before
+    //     {
+    //         opacity: 0;
+    //     }
+    // }
+
     &:hover,
     &:focus,
     &:active
     {
-        border-color: transparent;
-        // .p-icon--arrow
-        // {
-        //     color: $brand-primary;
-        // }
-        & + .c-goods
-        {
-            border-color: transparent;
-        }
-        &:after
-        {
-            opacity: 1;
-        }
-        &:before {
-          opacity: 0;
-        }
+      box-shadow: 0 5px 15px #b8c0c4;
+      border-bottom: none;
+
+
+      &:before {
+        border-left: none;
+      }
+
+      & + .cat-item:before {
+        border-left: none;
+      }
     }
+
     // LAYOUT
     &__header
     {
@@ -149,14 +183,23 @@
     // COMBOS
     .c-goods
     {
+        // nulled initial padding
+        padding-top: 0;
+        padding-bottom: 0;
         // magic number
         // to get one line flow
         // with left column
         bottom: -2px;
-        &:after
+        &:after,
+        &:before
         {
             display: none;
         }
+        &:hover,
+        &:active,
+        &:focus
+        {
+            box-shadow: none;
+        }
     }
 }
-

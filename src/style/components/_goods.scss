@@ -1,58 +1,124 @@
+/*********************************
+** GOODS ITEM
+** NOTICE:
+** All commented code is under
+** quarantine. Probably there are
+** some good ideas to improve,
+** but not now
+*********************************/
+
 .c-goods
 {
     position: relative;
 
     display: block;
 
-    outline: none;
+    padding-top: 20px;
+    padding-bottom: 20px;
 
     color: $gray-base;
-    &:not(:first-of-type)
-    {
-        border-left: 1px solid $gray-light;
-    }
-    // get best fps perfomance
-    &:after
+    outline: none;
+    transition: box-shadow $baseAnimationDuration;
+    &:not(:first-of-type):before
     {
         position: absolute;
-        z-index: 2;
-        top: 0;
-        right: 0;
-        bottom: 0;
+        top: 20px;
+        bottom: 20px;
         left: 0;
 
         content: '';
-        transition: opacity $baseAnimationDuration;
 
-        opacity: 0;
-        box-shadow: 0 5px 15px #b8c0c4;
+        border-left: 1px solid $gray-light;
     }
+    &:after
+    {
+        position: absolute;
+        top: 0;
+        right: 20px;
+        left: 20px;
+
+        content: '';
+
+        border-top: 1px solid $gray-light;
+    }
+    // get best fps perfomance
+    // &:after
+    // {
+    //     position: absolute;
+    //     z-index: 2;
+    //     top: 0;
+    //     right: 0;
+    //     bottom: 0;
+    //     left: 0;
+    //     content: '';
+    //     transition: opacity $baseAnimationDuration;
+    //     opacity: 0;
+    //     box-shadow: 0 5px 15px #b8c0c4;
+    // }
     &:hover,
     &:focus,
     &:active
     {
-        border-color: transparent;
-        .icon--arrow
+        z-index: 2;
+
+        color: $gray-base;
+        box-shadow: 0 5px 15px #b8c0c4;
+        &:before
+        {
+            opacity: 0;
+        }
+        &:after
+        {
+            z-index: 2;
+            top: 0;
+            right: 0;
+            bottom: -1px;
+            left: 0;
+
+            border-top-color: #fff;
+            border-bottom: none;
+            // border-bottom: 1px solid #fff;
+        }
+        // border-color: transparent;
+        // .icon--arrow
+        // {
+        //     color: $brand-primary;
+        // }
+        & + .c-goods:before,
+        & + .c-goods-more:before
+        {
+            border: none;
+        }
+        // & + .c-goods-more
+        // {
+        //     border-color: transparent;
+        // }
+        // &::after
+        // {
+        //     opacity: 1;
+        // }
+        .c-goods__title,
+        .c-goods__desc
         {
             color: $brand-primary;
         }
-        & + .c-goods
+        .icon--arrow
         {
-            border-color: transparent;
-        }
-        & + .c-goods-more
-        {
-          border-color: transparent;
-        }
-        &::after
-        {
-            opacity: 1;
+            transform: translate3d(20px, 0, 0);
+
+            color: $brand-primary;
         }
     }
     &--wide
     {
         // temp
         height: $heigth-goods;
+        &:after
+        {
+            bottom: -1px;
+
+            border-bottom: 1px solid $gray-light;
+        }
         .c-goods__thumb
         {
             display: table-cell;
@@ -60,7 +126,9 @@
             box-sizing: border-box;
             // width: 200px;
             width: 50%;
-            height: $heigth-goods;
+            // $heigth-goods minus
+            // vertical paddings
+            height: $heigth-goods - 40;
 
             vertical-align: middle;
         }
@@ -79,7 +147,7 @@
         .c-goods__meta
         {
             position: absolute;
-            bottom: 0;
+            bottom: 20px;
         }
     }
     // LAYOUT
@@ -109,7 +177,7 @@
             max-height: 100%;
             margin: auto;
 
-            @extend .h-img-res;
+            @include img-res;
         }
     }
     &__thumb--default
@@ -125,6 +193,7 @@
     &__title
     {
         font-size: $font-size-el-clasico;
+
         height: 30px;
     }
     &__desc
@@ -174,350 +243,14 @@
     }
 }
 
-/// TEMPORARY SHIT
+// TEMPORARY
 
 // don't have svg icon
 // of legacy smile
-
 .temp-icon
 {
     display: inline-block;
 
     width: 16px;
     height: 16px;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-.goods
-{
-    position: relative;
-
-    display: block;
-
-    color: $gray-base;
-    // border-top: 1px solid $gray-light;
-    background-color: #fff;
-    &:after
-    {
-        position: absolute;
-        top: 0;
-        right: -10px;
-        bottom: 0;
-        left: -10px;
-
-        content: '';
-        transition: box-shadow $baseAnimationDuration;
-
-        border-right: 1px solid $gray-light;
-    }
-    &:hover
-    {
-        z-index: 2;
-        .p-icon--arrow
-        {
-            color: $brand-primary;
-        }
-        // &:after
-        // {
-        //     // opacity: 1;
-        //     box-shadow: 0 5px 15px #b8c0c4;
-        //     border-right-color: transparent;
-        //     left: -11px;
-        //     top: -15px;
-        //     border-left: 1px solid #fff;
-        //     // bottom: -10px;
-        // }
-    }
-    &:focus,
-    &:active
-    {
-        // box-shadow: 0 5px 15px #b8c0c4;
-        // background-color: red;
-    }
-    .p-icon--arrow
-    {
-        font-size: 16px;
-
-        color: #c1c1c1;
-    }
-    &__thumb
-    {
-        position: relative;
-
-        display: block;
-        img
-        {
-            position: absolute;
-            top: 0;
-            right: 0;
-            bottom: 0;
-            left: 0;
-
-            max-height: 100%;
-            margin: auto;
-
-            @extend .h-img-res;
-        }
-        &--tiny
-        {
-            height: 115px;
-        }
-        &--default
-        {
-            height: 150px;
-        }
-    }
-    &__thumb + &__body
-    {
-        margin-top: 10px;
-    }
-    &__body
-    {
-        margin-bottom: 10px;
-    }
-    &__title
-    {
-        font-size: $font-size-el-clasico;
-    }
-    &__desc
-    {
-        font-size: $font-size-small - 1;
-        line-height: 18px;
-
-        color: #5f5f5f;
-    }
-    &__price
-    {
-        font-family: $headings-font-family;
-        font-size: 12px;
-
-        display: inline-block;
-
-        color: #000;
-        strong
-        {
-            font-size: 20px;
-            font-weight: 700;
-        }
-    }
-    &__meta
-    {
-        display: flex;
-
-        align-items: center;
-    }
-    &--wide
-    {
-        display: flex;
-
-        box-sizing: border-box;
-        height: 222px;
-
-        .goods__thumb
-        {
-
-            width: 50%;
-            height: auto;
-
-            align-self: center;
-            img
-            {
-                position: static;
-
-                max-height: 200px;
-            }
-        }
-        .goods__body
-        {
-            display: flex;
-            flex-direction: column;
-
-            box-sizing: border-box;
-            width: 50%;
-
-            padding-right: 50px;
-            padding-left: 5px;
-        }
-        .goods__title
-        {
-            margin-bottom: auto;
-        }
-        .goods__meta
-        {
-
-            margin-top: auto;
-        }
-    }
-}
-
-
-
-
-
-.goods-more
-{
-    font-family: $headings-font-family;
-
-    position: relative;
-
-    box-sizing: border-box;
-
-    display: block;
-
-    width: 170px;
-    max-width: 100%;
-    height: $heigth-goods;
-    margin: 0 auto;
-
-    text-align: center;
-
-    color: $gray-darker;
-    border: 1px dashed #dbdbdb;
-    border-radius: 10px;
-    background-color: #f5f5f5;
-    &:after
-    {
-        position: absolute;
-        top: 50%;
-        right: 5px;
-        left: 5px;
-
-        content: '';
-
-        border: 1px dashed #dbdbdb;
-    }
-    &__title
-    {
-        font-size: 18px;
-        font-weight: 600;
-    }
-    &__count
-    {
-        font-size: 36px;
-        font-weight: 600;
-    }
-    &__cat-title
-    {
-        font-size: $font-size-base;
-        font-weight: 600;
-
-        margin-bottom: 30px;
-    }
-    &__total-count
-    {
-        font-family: Arial;
-        font-size: $font-size-small - 1;
-    }
-    &__top
-    {
-        padding-top: 30px;
-    }
-    &__bottom
-    {
-        position: absolute;
-        right: 20px;
-        bottom: 20px;
-        left: 20px;
-    }
-}
-
-.u-tb {
-  background-color: salmon;
-  height: 225px;
-  padding: 15px 0;
-
-  box-sizing: border-box;
-
-  .o-tb  {
-    height: 100%;
-
-    &__td {
-      height: 50%;
-
-    }
-    & > .o-tb__row:fist-of-type * {
-      background-color: yellow;
-    }
-  }
-}
-
-
-.c-goods-more
-{
-    font-family: $headings-font-family;
-
-    display: block;
-
-    height: $heigth-goods;
-    margin: 0 auto;
-
-    text-align: center;
-
-    color: $gray-darker;
-    border-left: 1px solid $gray-light;
-    // LAYOUT
-    &__inner
-    {
-        position: relative;
-
-        box-sizing: border-box;
-        // magic important
-        // instead more html wrappers
-        // need fixed width vs 100% o-tb
-        width: 170px !important;
-        height: 100%;
-        margin: 0 auto;
-
-        border: 1px dashed #dbdbdb;
-        border-radius: 10px;
-        background-color: #f5f5f5;
-        //border after first cell
-        .o-tb__row:first-of-type .c-goods-more__item
-        {
-            border-bottom: 1px dashed #dbdbdb;
-        }
-    }
-    &__item
-    {
-        height: 50%;
-        padding: 10px;
-    }
-    // ELEMENTS
-    &__title
-    {
-        font-size: 18px;
-        font-weight: 600;
-    }
-    &__count
-    {
-        font-size: 36px;
-        font-weight: 600;
-    }
-    &__cat-title
-    {
-        font-size: $font-size-base;
-        font-weight: 600;
-
-        margin-bottom: 20px;
-    }
-    &__total-count
-    {
-        font-family: Arial;
-        font-size: $font-size-small - 1;
-
-        padding: 0 20px;
-    }
 }

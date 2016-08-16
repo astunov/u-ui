@@ -1,5 +1,5 @@
 /*********************************
-** NAME
+** CATEGORY MENU BAR
 *********************************/
 
 .c-cat-menu
@@ -7,6 +7,8 @@
     // LAYOUT
     &__list
     {
+        font-size: 0;
+
         margin: 0;
         // magic number
         // hide border-top&left of first-line
@@ -14,21 +16,21 @@
         margin-left: -1px;
         padding: 0;
 
-        font-size: 0;
-        // padding-bottom: 15px;
-
         @include clearfix;
     }
     &__item
     {
-        // float: left;
-
+        // to get
+        // vertical align
+        // in item
         display: inline-table;
 
         width: 220px;
         height: 55px;
 
         list-style-type: none;
+
+        vertical-align: top;
 
         border-top: 1px solid $gray-light;
         border-left: 1px solid $gray-light;
@@ -41,36 +43,18 @@
 
         position: relative;
 
-        display: block;
-
+        display: table-cell;
         overflow: hidden;
 
         box-sizing: border-box;
         width: 100%;
-        height: 55px;
-        padding: 15px;
+        padding: 0 15px;
 
         transition-duration: $baseAnimationDuration;
         transition-property: color, box-shadow;
+        vertical-align: middle;
 
         color: $gray-base;
-        // magic element
-        // to clear &__item overflow
-        // > 2 text row
-        &:after
-        {
-            position: absolute;
-            z-index: 1;
-            right: 0;
-            bottom: 0;
-            left: 0;
-
-            height: 8px;
-
-            content: '';
-
-            background-color: #fff;
-        }
         &:hover
         {
             z-index: 3;
@@ -100,10 +84,9 @@
     }
     &__link-inner
     {
-        // display: table-cell;
-        // height: 25px;
-        // vertical-align: middle;
+        overflow: hidden;
 
+        max-height: 30px;
     }
     &__link-title
     {

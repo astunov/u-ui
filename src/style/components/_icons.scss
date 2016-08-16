@@ -16,7 +16,8 @@
 
     fill: currentColor;
 
-    transition: color $baseAnimationDuration;
+    transition-property: color, transform;
+    transition-duration: $baseAnimationDuration;
 
     &--arrow {
       font-size: 8px;

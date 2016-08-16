@@ -1,7 +1,8 @@
 mixin pageTitle(content, tag)
+	- var tag = tag || 'h1'
 	- var content = content || 'Заголовок страницы'
 	.l-page__title-wrapper
-		if tag == undefined || 'h1'
+		if tag === 'h1'
 			h1.l-page__title #{content}
 		else if tag === 'h2'
 			h2.l-page__title #{content}

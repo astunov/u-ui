@@ -65,11 +65,14 @@ gulp.task('jade', function() {
 });
 
 gulp.task('style', function() {
-  return gulp.src([inputDir + 'style/*.scss', '!' + inputDir + 'style/_*.scss'])
-     .pipe(wait(2000))
+  return gulp.src([inputDir + 'style/**/*.scss'])
      .pipe(plumber())
      .pipe(sourcemaps.init())
-     .pipe(sass())
+     .pipe(sass(
+       {
+         includePaths: [inputDir + 'style/**/*.*']
+       }
+    ).on('error', sass.logError))
      .pipe(autoprefixer({
        browsers: ['last 3 versions'],
        cascade: false
@@ -193,7 +196,7 @@ gulp.task('prod', [
   'svgSpriteBuild'
 ]);
 
-// TODO: prod & watch
+// TODO: prod
 
 // gulp.task('clean', function (cb) {
 //    rimraf('./build/*.html', cb);
