@@ -4,5 +4,8 @@ module.exports = {
     "env": {
         "browser": true,
         "jquery": true
+    },
+    "rules": {
+      "spaced-comment": ["error", "always", { "markers": ["!", "="] }]
     }
 };
