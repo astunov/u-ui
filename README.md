@@ -32,21 +32,27 @@ Exception: grid. Row\cols are without any prefixes.
 # TODO
 
 ## COMMON
-- []* SCSS LINTER
-- [] filters
-- [] file names system
+*- [] SCSS LINTER
+*- [] filters
+*- [] file names system
 
 ## Perfomance
-- [] FPS on shadow hovers
-- [] Lazy img load
+*- [] FPS on shadow hovers
+*- [] Lazy img load
 
 ## Accessibility
-- [] main before sidebar
-- [] checkbox\radio
+*- [] main before sidebar
+*- [x] checkbox
+*- [] radio
 
 ## Refactor
-- [] .c-stripes
+*- [] .c-stripes
+*- [] Custom select. Current is selectize
+  Options:
+    https://github.com/lcdsantos/jQuery-Selectric
+    http://selectric.js.org/
 
 # ISSUES
 
-border cat
+
+

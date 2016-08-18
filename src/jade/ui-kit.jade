@@ -3,7 +3,7 @@ block vars
 	- var array = {body_class:'t-dev', layout_mod:'', title:'UI KIT | Goods', 'footer': false}
 block content
 
-		.container
+		.container(style="padding-bottom:300px;")
 			h1 UI Kit
 
 			h2 Цвета
@@ -36,6 +36,16 @@ block content
 				+radio('Пассив', {"name":"123"})
 				+radio('Выбрано блок', {"name":"31", "disabled": true, "checked": true})
 				+radio('Пассив блок', {"name":"123", "disabled": true})
-
+			.fl-row
+				.block(style="width:150px;")
+					select#fl123(name="fl123")
+						option(value="0") По умолчанию
+						option(value="1") Второй
+						option(value="2") Третий
+				.block(style="width:150px;")
+					select#fl122(class="js-select" name="fl123")
+						option(value="0") JS селект
+						option(value="1") Второй
+						option(value="2") Третий
 
 

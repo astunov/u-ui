@@ -12,5 +12,8 @@ html(lang="ru")
 			if array.footer == undefined
 				include jade-components/_l-footer.jade
 	script(src="https://code.jquery.com/jquery.min.js")
+	<!--[if lt IE 9]>
+	script(src="http://cdnjs.cloudflare.com/ajax/libs/es5-shim/2.0.8/es5-shim.min.js")
+	<![endif]-->
 	script(src="js/main.js")
 	script(src="js/helpers.js")
