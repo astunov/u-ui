@@ -14,7 +14,7 @@
 @import 'icons';
 @import 'breadcrumbs';
 
-@import 'btn';
+@import 'btns';
 
 @import 'discount-widget';
 
@@ -29,29 +29,6 @@
 @import 'o-table';
 
 
-
-
-
-
-
-
-.pin
-{
-    font-size: 8px;
-    font-weight: 700;
-    line-height: 9px;
-
-    display: inline-block;
-
-    padding: 8px 10px;
-
-    border-radius: 5px;
-    &--default
-    {
-        color: $gray-darker;
-        background-color: #e2e8eb;
-    }
-}
 
 
 .brands

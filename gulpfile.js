@@ -76,7 +76,7 @@ gulp.task('style', function() {
        }
     ).on('error', sass.logError))
      .pipe(autoprefixer({
-       browsers: ['last 3 versions'],
+       browsers: ['last 3 versions', 'ie >= 8', 'Firefox >= 41'],
        cascade: false
      }))
      .pipe(sourcemaps.write())
@@ -221,7 +221,7 @@ gulp.task('style:prod', function() {
      .pipe(plumber())
      .pipe(sass())
      .pipe(autoprefixer({
-       browsers: ['last 3 versions'],
+       browsers: ['last 3 versions', 'ie >= 8', 'Firefox >= 41'],
        cascade: false
      }))
      .pipe(csso())

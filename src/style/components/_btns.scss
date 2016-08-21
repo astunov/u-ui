@@ -1,0 +1,114 @@
+/*********************************
+** BUTTONS
+**
+** Reset
+**
+*********************************/
+
+/**
+ * RESET
+ */
+
+[role='button'],
+input[type='submit'],
+input[type='reset'],
+input[type='button'],
+button
+{
+    box-sizing: content-box;
+
+    cursor: pointer;
+    transition: all, $baseAnimationDuration;
+
+    outline: none;
+}
+
+/* Reset `button` and button-style `input` default styles */
+input[type='submit'],
+input[type='reset'],
+input[type='button'],
+button
+{
+    /* cursor: default; */
+    font: inherit;
+    line-height: normal;
+
+    overflow: visible;
+
+    padding: 0;
+
+    -webkit-user-select: none; /* for button */
+       -moz-user-select: none;
+        -ms-user-select: none;
+
+    color: inherit;
+    border: 0;
+    background: none;
+
+    -webkit-appearance: button; /* for input */
+}
+input::-moz-focus-inner,
+button::-moz-focus-inner
+{
+    padding: 0;
+
+    border: 0;
+}
+
+/* Make `a` like a button */
+[role='button']
+{
+    display: inline-block;
+
+    cursor: default;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+    text-align: center;
+    white-space: pre;
+    text-decoration: none;
+
+    color: inherit;
+}
+
+
+
+
+.c-btn
+{
+    display: inline-block;
+    vertical-align: middle;
+    &--default
+    {
+        color: $gray-darker;
+        background-color: #e2e8eb;
+    }
+    /**
+   * SIZE
+   */
+    &--tiny
+    {
+        font-size: 8px;
+        font-weight: 700;
+        line-height: 1;
+
+        padding: 7px 10px;
+
+        border-radius: 5px;
+    }
+   /**
+   * UNIC
+   */
+
+    // enter button
+    // work correct only
+    // with &--tiny size
+    // and default color
+    &--enter
+    {
+        color: $gray-darker;
+        background: svg-url('<svg xmlns="http://www.w3.org/2000/svg" width="42" height="26"><path d="M37 25.5H25c-2.03 0-3.76-1.21-4.55-2.94H5c-2.76 0-5-2.24-5-5V5.5c0-2.76 2.24-5 5-5h32c2.76 0 5 2.24 5 5V20.5c0 2.76-2.24 5-5 5z" fill="#e2e8eb"/></svg>') center center no-repeat;
+        // background-size: cover;
+        padding: 8px 10px 9px;
+    }
+}
