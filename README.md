@@ -5,8 +5,8 @@
 * http://localhost:9000/
 
 NPM LINK
-npm i -g browser-sync eslint eslint-config-google gulp gulp-autoprefixer gulp-cheerio gulp-cssfont gulp-csso gulp-directory-sync gulp-ignore gulp-imagemin gulp-inline-css gulp-jade gulp-plumber gulp-postcss gulp-purifycss gulp-replace gulp-rigger gulp-sass gulp-sourcemaps gulp-svg-sprite gulp-svgmin gulp-uglify gulp-wait gulp-watch imagemin-pngquant postcss-assets postcss-reporter postcss-scss rimraf stylelint 
-npm link browser-sync eslint eslint-config-google gulp gulp-autoprefixer gulp-cheerio gulp-cssfont gulp-csso gulp-directory-sync gulp-ignore gulp-imagemin gulp-inline-css gulp-jade gulp-plumber gulp-postcss gulp-purifycss gulp-replace gulp-rigger gulp-sass gulp-sourcemaps gulp-svg-sprite gulp-svgmin gulp-uglify gulp-wait gulp-watch imagemin-pngquant postcss-assets postcss-reporter postcss-scss rimraf stylelint 
+npm i -g browser-sync eslint eslint-config-google gulp gulp-autoprefixer gulp-cheerio gulp-cssfont64 gulp-csso gulp-directory-sync gulp-ignore gulp-imagemin gulp-inline-css gulp-jade gulp-plumber gulp-postcss gulp-purifycss gulp-replace gulp-rigger gulp-sass gulp-sourcemaps gulp-svg-sprite gulp-svgmin gulp-uglify gulp-wait gulp-watch imagemin-pngquant postcss-assets postcss-reporter postcss-scss rimraf stylelint 
+npm link browser-sync eslint eslint-config-google gulp gulp-autoprefixer gulp-cheerio gulp-cssfont64 gulp-csso gulp-directory-sync gulp-ignore gulp-imagemin gulp-inline-css gulp-jade gulp-plumber gulp-postcss gulp-purifycss gulp-replace gulp-rigger gulp-sass gulp-sourcemaps gulp-svg-sprite gulp-svgmin gulp-uglify gulp-wait gulp-watch imagemin-pngquant postcss-assets postcss-reporter postcss-scss rimraf stylelint 
 
 # SCSS 
 
