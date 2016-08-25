@@ -12,7 +12,7 @@
 
     height: $heigth-goods;
     margin: 0 auto;
-    padding: 20px 0;
+    padding: 20px 10px;
 
     text-align: center;
 
@@ -34,10 +34,7 @@
         position: relative;
 
         box-sizing: border-box;
-        // magic important
-        // instead more html wrappers
-        // need fixed width vs 100% o-tb
-        width: 170px !important;
+        max-width: 170px;
         height: 100%;
         margin: 0 auto;
 

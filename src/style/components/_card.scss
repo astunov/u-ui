@@ -12,6 +12,7 @@ $c-card-padding: 20px;
 {
     position: relative;
 
+    box-sizing: border-box;
     margin-bottom: 35px;
     padding: $c-card-padding;
 
@@ -20,6 +21,7 @@ $c-card-padding: 20px;
     &__header
     {
         position: relative;
+        z-index: 1;
         // visual border line
         &:after
         {

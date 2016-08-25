@@ -17,22 +17,23 @@ mixin goods(settings, content)
 
 
 	a.col.c-goods(href="" title="" class=settings.classList)
-			.c-goods__thumb(class=currentThumbClass)
-				img(src="#{template.src[randomImg]}", alt="")
-			if settings.thumbOnly !== true
-				.c-goods__body
-					.c-goods__title !{template.title[randomTitle]}
-					if settings.desc
-						.c-goods__desc !{template.desc}
-					.c-goods__meta
-						.c-goods__meta-item
-							.c-goods__price
-								strong !{template.price}
-								|&nbsp;руб.
-						.c-goods__meta-item
-							img.temp-icon(src="http://i.imgur.com/5HVcSqj.png" alt="")
-						.c-goods__meta-item
-							+icon('arrow')
+			.c-goods__inner
+				.c-goods__thumb(class=currentThumbClass)
+					img(src="#{template.src[randomImg]}", alt="")
+				if settings.thumbOnly !== true
+					.c-goods__body
+						.c-goods__title !{template.title[randomTitle]}
+						if settings.desc
+							.c-goods__desc !{template.desc}
+						.c-goods__meta
+							.c-goods__meta-item
+								.c-goods__price
+									strong !{template.price}
+									|&nbsp;руб.
+							.c-goods__meta-item
+								img.temp-icon(src="http://i.imgur.com/5HVcSqj.png" alt="")
+							.c-goods__meta-item.c-goods__meta-item--arrow
+								+icon('arrow')
 
 //- PURE GOODS TEMPLATE
 	a.c-goods(href="" title="")

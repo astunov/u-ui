@@ -1,10 +1,10 @@
 /*********************************
 ** GOODS ITEM
-** NOTICE:
-** All commented code is under
-** quarantine. Probably there are
-** some good ideas to improve,
-** but not now
+//
+// THUMBS SIZES
+// default: 145
+// wide: 180
+// tiny: 110
 *********************************/
 
 .c-goods
@@ -12,13 +12,13 @@
     position: relative;
 
     display: block;
+    // padding-top: 20px;
+    // padding-bottom: 20px;
 
-    padding-top: 20px;
-    padding-bottom: 20px;
+    transition: box-shadow $baseAnimationDuration;
 
     color: $gray-base;
     outline: none;
-    transition: box-shadow $baseAnimationDuration;
     &:not(:first-of-type):before
     {
         position: absolute;
@@ -111,7 +111,9 @@
     }
     &--wide
     {
+        display: table;
         // temp
+
         height: $heigth-goods;
         &:after
         {
@@ -124,13 +126,17 @@
             display: table-cell;
 
             box-sizing: border-box;
-            // width: 200px;
             width: 50%;
             // $heigth-goods minus
             // vertical paddings
             height: $heigth-goods - 40;
+            padding-top: 0;
 
             vertical-align: middle;
+            img
+            {
+                max-height: 185px;
+            }
         }
         .c-goods__body
         {
@@ -150,12 +156,52 @@
             bottom: 20px;
         }
     }
+    &--tiny
+    {
+        padding: 0 15px;
+        .c-goods__body
+        {
+            display: none;
+            padding: 0 15px;
+        }
+        .c-goods__title {
+            margin-bottom: 15px;
+        }
+        .c-goods__inner {
+            transition: box-shadow $baseAnimationDuration;
+        }
+        &:hover,
+        &:active,
+        &:focus
+        {
+            box-shadow: none;
+            .c-goods__inner
+            {
+                position: absolute;
+                z-index: 99;
+                top: 0;
+                right: 0;
+                left: 0;
+
+                background-color: #fff;
+                box-shadow: 0 5px 15px #b8c0c4;
+            }
+            .c-goods__body
+            {
+                display: block;
+            }
+        }
+    }
     // LAYOUT
+    &__inner
+    {
+        padding: 20px 0;
+    }
     &__body
     {
         padding: 0 10px;
-        // mb
-        // overflow: hidden;
+
+        background-color: #fff;
     }
     &__meta
     {
@@ -174,21 +220,24 @@
         padding-top: 5px;
         img
         {
+            display: block;
+
+            max-width: 100%;
+            height: auto;
             max-height: 100%;
             margin: auto;
-
-            @include img-res;
         }
-    }
-    &__thumb--default
-    {
-        height: 150px;
-    }
-    // uses for product with
-    // single thumb (no desc, price etc.)
-    &__thumb--tiny
-    {
-        height: 115px;
+        // THEMES
+        &--default
+        {
+            height: 150px;
+        }
+        // uses for product with
+        // single thumb (no desc, price etc.)
+        &--tiny
+        {
+            height: 115px;
+        }
     }
     &__title
     {
@@ -231,6 +280,15 @@
     &__meta-item + &__meta-item:last-of-type
     {
         padding-left: 10px;
+    }
+    &__cart {
+        font-size: $font-size-small;
+        color: $gray-base;
+        .icon {
+            color: #939799;
+            font-size: 15px;
+            padding-right: 5px;
+        }
     }
     // THEMING
     .icon--arrow

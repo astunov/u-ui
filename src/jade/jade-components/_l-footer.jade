@@ -8,19 +8,12 @@
 //- ./
 //- +
 +card()
-	+cardHeader({"title": "Последние просмотренные", "linkTitle": "Посмотреть и отредактировать историю", "controls": true })
-	+cardBody()
-		+cardGoods()
-			+loop_while(8)
-				+goods({"classList": ['col-1_8'], "thumbOnly": true})
-//- ./
-//- +
-+card()
 	+cardHeader({"title": "Последние просмотренные на анаболиках ", "linkTitle": "Посмотреть и отредактировать историю", "controls": true })
 	+cardBody()
 		+cardGoods()
 			+loop_while(8)
-				a.col.col-1_8.c-goods(href="" title="")
+				a.col.col-1_8.c-goods.c-goods--tiny(href="" title="")
+					.c-goods__inner
 						.c-goods__thumb.c-goods__thumb--tiny
 							img(src="https://p.fast.ulmart.ru/p/mid/361/36141/3614161.jpg" alt="")
 						.c-goods__body
@@ -30,6 +23,16 @@
 									.c-goods__price
 										strong 18 990
 										|&nbsp;руб.
-								.c-goods__meta-item ик Добавить в корзину
+							button.c-goods__cart
+								+icon('cart')
+								| Добавить в корзину
+//- ./
+//- +
++card()
+	+cardHeader({"title": "Последние просмотренные", "linkTitle": "Посмотреть и отредактировать историю", "controls": true })
+	+cardBody()
+		+cardGoods()
+			+loop_while(8)
+				+goods({"classList": ['col-1_8'], "thumbOnly": true})
 //- ./
 include ./_discBar.jade

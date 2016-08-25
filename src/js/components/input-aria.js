@@ -21,12 +21,15 @@
   function toggleInputState(container) {
     var input = container.querySelector('input');
     var inputIsChecked = input.hasAttribute('checked');
-    if (inputIsChecked) {
-      input.removeAttribute('checked');
-      container.setAttribute('aria-checked', false);
-    } else {
-      input.setAttribute('checked', true);
-      container.setAttribute('aria-checked', true);
+    var inputIsBlocked = input.hasAttribute('disabled');
+    if (!inputIsBlocked) {
+      if (inputIsChecked) {
+        input.removeAttribute('checked');
+        container.setAttribute('aria-checked', false);
+      } else {
+        input.setAttribute('checked', true);
+        container.setAttribute('aria-checked', true);
+      }
     }
   }
 
