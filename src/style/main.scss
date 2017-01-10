@@ -11,7 +11,7 @@
 @import 'base/typo';
 @import 'base/helpers';
 @import 'base/svg-sprite';
-// // TODO: change font load method
+// TODO: change font load method
 // // to local storage
 // @import 'base/fonts';
 
@@ -30,9 +30,7 @@
 
 // Components
 // all components in 1 file
-@import 'components/0module'; // <--
-
-
+@import 'components/0module';
 
 // QUARANTINE STYLES
 
